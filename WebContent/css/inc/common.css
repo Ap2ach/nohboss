@@ -4,7 +4,7 @@
 }
 html{
     overflow: scroll;
-    background-color:ivory
+
 }
 html,body,input,div{
     padding: 0px;
@@ -26,12 +26,16 @@ a{
     text-decoration: #0f0f00;
     color: #0f0f00;
 }
-body{
-    font-weight: bold;
-    font-size: 18px;
-    color: #5b5b5b;
-   
+hr{
+    border: #343a40 solid 3px;
+    max-width: 1600px;
+    height:inherit;
+    /* background-color:rgb(95, 86, 95);  */
+    margin-left: auto;
+    margin-right: auto;
+    position: relative;
 }
+
 
 /* -----------------------------------기본 마진 패딩 관련------------------------------------------------------------------ */
 .margin-t-20{
@@ -122,17 +126,20 @@ body{
 
 
 /* ---------------------------영역나누기--------------------------------------------------------------------------- */
-body{
-    /* background:rgb(0, 207, 207); */
-    background: ivory;
-}
+
 header{
     height:60px;
-    background-color:rgb(95, 86, 95); 
+    background-color: #343a40;
+    position: fixed;
+    top: 0;
+    right: 0;
+    left: 0;
+    z-index: 1030;
+   
 }
 #visual{
     height:200px;
-    background-color:rgb(246, 219, 218); 
+
 }
 #body{
     min-height:900px;
@@ -171,11 +178,6 @@ header .header-sub-container{
     /* background-color:blue;  */
 }
 
-
-#visual .content-container{
-    /* background:tomato; */
-    background-color:rgb(246, 219, 218); 
-}
 
 #body .content-container{
     position: relative;
@@ -289,4 +291,4 @@ footer .content-container{
     }
     .menu-lists ul li:first-child{
         border-left:none;
-    } 
+    }
