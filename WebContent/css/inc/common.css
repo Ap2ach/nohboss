@@ -1,8 +1,10 @@
 /* -----------------------------------초기 기본 세팅------------------------------------------------------------------ */
 
 @media (max-width: 768px){
+    body{color:red;}
 }
 html{
+    /* font-family: 'Gamja Flower', cursive; */
     overflow: scroll;
     background-color:ivory
 }
@@ -28,7 +30,7 @@ a{
 body{
     font-size: 18px;
     color: #5b5b5b;
-    font-family: 돋움, Arial, Helvetica, sans-serif;
+    /* font-family: 돋움, Arial, Helvetica, sans-serif; */
 }
 
 /* -----------------------------------기본 마진 패딩 관련------------------------------------------------------------------ */
@@ -134,6 +136,7 @@ header{
 }
 #body{
     min-height:900px;
+    font-weight: bold;
     /* background:rgb(6, 221, 78); */
 }
 footer{
@@ -154,16 +157,19 @@ footer{
 header .header-logo-container{
     position: relative;
     width:300px;
+    background-color:rgb(95, 86, 95);
     /* background-color:red;  */
 }
 header .header-main-container{
     position: relative;
     width:1000px;
+    background-color:rgb(95, 86, 95);
     /* background-color:green;  */
 }
 header .header-sub-container{
     position: relative;
     width:300px;
+    background-color:rgb(95, 86, 95);
     /* background-color:blue;  */
 }
 
