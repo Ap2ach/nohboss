@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+   <meta charset="UTF-8">
+   <title>혹맵</title>
+   <link rel="stylesheet" type="text/css" media="screen" href="/WebContent/css/hokmap/" />
+   <link rel="stylesheet" type="text/css" media="screen" href="/WebContent/css/hokdc/list.css"/>
+
+   <link rel="stylesheet" type="text/css" media="screen" href="/WebContent/css/inc/asidelist.css" />
+   <link rel="stylesheet" type="text/css" media="screen" href="/WebContent/css/inc/common.css" />
+   <link rel="stylesheet" type="text/css" media="screen" href="/WebContent/css/inc/pager.css" />
+   <link rel="stylesheet" type="text/css" media="screen" href="/WebContent/css/inc/searchform.css" />
+   <script type="text/javascript" src="//dapi.kakao.com/v2/maps/sdk.js?appkey=a621bc0c3c3a2693ab4fd406c0080068&libraries=services"></script>
+   <style>
+      #body{
+                min-height:900px;        
+            }
+            footer{
+                height:200px;
+          
+                border: black solid 1px;
+            }
+            .content-container{
+                width:1600px;
+                height:inherit;
+                margin-left: auto;
+                margin-right: auto;
+                position: relative;
+                
+            }
+            #body .content-container{
+                min-height: inherit;
+               
+            }
+            footer .content-container{
+                background: wheat;
+            }
+
+            #body .aside-container{
+                position: relative;
+                width:300px;
+                border: black solid 1px;
+                 
+            }
+            #body .main-container{
+                position: relative;
+                width:1000px;
+            }
+        </style>
+</head>
+<body>
+   <header>
+      <div class="content-container flex">
+          <div class="header-logo-container">
+              <a href=""><img src="/WebContent/image/logo.png" width=166px height=70px></a>
+          </div>
+          <div class="header-main-container"> 
+              <nav class="menu-lists">
+                  <h1 class="hidden">메인메뉴</h1>
+                  <ul>
+                      <li class="hok-hover now"><a href="#">DISCOUNT</a></li>
+                      <li class="hok-hover"><a href="#">HOK! MAP</a></li>
+                      <li class="hok-hover"><a href="#">HOK! HOK!</a></li>
+                      <li class="hok-hover"><a href="#"> CENTER</a></li>
+                  </ul>
+              </nav>
+          </div>
+          <div class="header-sub-container">
+              <nav>
+                  <h1 class="hidden">로그인</h1>
+                  <ul>
+                      <li class=""><a href="">LOGOUT</a></li>
+                      <li class=""><a href="">MyPage</a></li>
+                  </ul>
+              </nav>
+          </div>  
+      </div>
+  </header>
+  <div id="visual">
+      <div class="content-container">
+          <section id="search-form" >
+              <h1 class="hidden">비쥬얼검색창</h1>
+                  <div>
+                      <input type="text" minlength="1 "maxlength="10" placeholder="검색어를 입력하세요" class="margin-r-20" />
+                      <input class="btn" type="submit" value=" " alt="검색" />
+                  </div>
+          </section>
+      </div>
+  </div>
+   <div id="body">
+      <div class="content-container" style="display:flex;">
+         <div class="aside-container">ASIDE</div>
+         <div class="main-container">Main</div>
+         <div class="aside-container">ASIDE
+            <div class="map_wrap">
+               <div id="map"></div>
+               <div class="hAddr">
+                  <span class="title">지도중심기준 행정동 주소정보</span>
+                  <span id="centerAddr"></span>
+                  <div><input type="button" name="loc" class="myloc" /></div>
+               </div>
+               <div id="menu_wrap" class="bg_white hidden">
+                  <div class="option">
+                     <div>
+                        <form onsubmit="searchPlaces(); return false;">
+                           <input type="text" id="keyword" size="15">
+                           <button type="submit">검색하기</button>
+                        </form>
+                     </div>
+                  </div>
+                  <hr>
+                  <ul id="placesList"></ul>
+                  <div id="pagination"></div>
+               </div>
+            </div>
+         </div>
+      </div>
+   </div>
+   <footer>
+      <div class="content-container">
+         FOOTER
+      </div>
+   </footer>
+
+   <script src="hokmap.js"></script>
+</body>
+
+</html>

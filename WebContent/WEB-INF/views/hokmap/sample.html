@@ -1,0 +1,278 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+   <meta charset="UTF-8">
+   <title>샘플</title>
+   <link rel="stylesheet" type="text/css" media="screen" href="/muzihokhamsave/WebContent/css/hokmap.css" />
+   <link rel="stylesheet" type="text/css" media="screen" href="/muzihokhamsave/WebContent/css/header.css" />
+   <link rel="stylesheet" type="text/css" media="screen" href="/muzihokhamsave/WebContent/css/list.css" />
+   <script type="text/javascript" src="//dapi.kakao.com/v2/maps/sdk.js?appkey=a621bc0c3c3a2693ab4fd406c0080068&libraries=services"></script>
+   <style>
+      #body{
+                min-height:900px;        
+            }
+            footer{
+                height:200px;
+                background:rgb(235, 8, 216);
+            }
+            .content-container{
+                width:1600px;
+                height:inherit;
+                margin-left: auto;
+                margin-right: auto;
+                position: relative;
+                
+            }
+            #body .content-container{
+                min-height: inherit;
+               
+            }
+            footer .content-container{
+                background: wheat;
+            }
+
+            #body .aside-container{
+                position: relative;
+                width:300px;
+                background-color:hotpink;
+                 
+            }
+            #body .main-container{
+                position: relative;
+                width:1000px;
+            }
+        </style>
+</head>
+
+<body>
+   <header>
+      <div class="topbar">
+         <nav class="menu-lists">
+            <div class="logo"></div>
+            <ul>
+               <li class="hok-hover visit-main"><a href="#">Home</a></li>
+               <li class="hok-hover sub"><a href="#">HOK! DISCOUNT</a></li>
+               <li class="hok-hover sub"><a href="#">HOK! MAP</a></li>
+               <li class="hok-hover sub"><a href="#">HOK! HOK! HOK!</a></li>
+               <li class="hok-hover sub"><a href="">LOGIN</a></li>
+               <li class="hok-hover sub"><a href="">REGIST</a></li>
+            </ul>
+         </nav>
+      </div>
+      <section id="search-form">
+         <h1 class="hidden">비쥬얼검색창</h1>
+         <div class="text-center">
+            <input type="text" minlength="1 " maxlength="10" placeholder="검색어를 입력하세요" class="margin-r-10" />
+            <input class="btn " type="submit" value="" alt="검색" />
+         </div>
+      </section>
+      </div>
+   </header>
+   <div id="body">
+      <div class="content-container" style="display:flex;">
+         <div class="aside-container">ASIDE</div>
+         <div class="main-container">
+            <div id="myList" class="dc-container margin-b-20">
+                <div class="dc-category-title">                            
+                    <div class="margin-l-20">MyList</div>
+                </div>
+                <div class="dc-category-content">
+                    <div class="item-dc-list">
+                        <ul >                                                
+                            <li>
+                                <div>
+                                    <div class="dc-image-border">
+                                        <a class="" href="detail">
+                                            <div class="margin-20 dc-image-container">
+                                                <img class="dc-title-image" src="/muzihokhamsave/WebContent/image/hokdc/brand/kfc.jpg" alt="이미지"/>
+                                            </div>
+                                        <div>
+                                            <div class="margin-10 dc-title">
+                                                <!-- <span class="margin-r-10" style="font-weight: bold; ">[무지]</span><br> -->
+                                                <span class="dc-detail-title" style="font-weight: bold;">무지혹 20% 세일!무지혹 20% 세일!무지혹 20% 세일!</span>
+                                            </div>
+                                            <div class="margin-b-10 flex dc-image-top-border">
+                                                <div class="margin-l-20 margin-t-10" style="font-size: 15px;">
+                                                    <span class="dc-detail-start-date">18.12.11</span>
+                                                    <span>~</span>
+                                                    <span class="dc-detail-end-date">18.12.31</span>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        </a>
+                                    </div>    
+                                </div>  
+                            </li>
+                            <li>
+                                <div>
+                                    <div class="dc-image-border">
+                                        <a href="detail">
+                                            <div class="margin-20 dc-image-container">
+                                                    <img class="dc-title-image" src="/muzihokhamsave/WebContent/image/hokdc/brand/kfc.jpg" alt="이미지"/>
+                                            </div>
+                                        <div>
+                                            <div class="margin-10 dc-title">
+                                                <!-- <span class="margin-r-10" style="font-weight: bold; ">[무지]</span><br> -->
+                                                <span class="dc-detail-title" style="font-weight: bold;">무지혹 20% 세일!무지혹 20% 세일!무지혹 20% 세일!</span>
+                                            </div>
+                                            <div class="margin-b-10 flex dc-image-top-border">
+                                                <div class="margin-l-20 margin-t-10" style="font-size: 15px;">
+                                                    <span class="dc-detail-start-date">18.12.11</span>
+                                                    <span>~</span>
+                                                    <span class="dc-detail-end-date">18.12.31</span>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        </a>
+                                    </div>    
+                                </div>  
+                            </li>
+                            <li>
+                                <div>
+                                    <div class="dc-image-border">
+                                        <a href="detail">
+                                            <div class="margin-20 dc-image-container">
+                                                    <img class="dc-title-image" src="/muzihokhamsave/WebContent/image/hokdc/brand/kfc.jpg" alt="이미지"/>
+                                            </div>
+                                        <div>
+                                            <div class="margin-10 dc-title">
+                                                <!-- <span class="margin-r-10" style="font-weight: bold; ">[무지]</span><br> -->
+                                                <span class="dc-detail-title" style="font-weight: bold;">무지혹 20% 세일!무지혹 20% 세일!무지혹 20% 세일!</span>
+                                            </div>
+                                            <div class="margin-b-10 flex dc-image-top-border">
+                                                <div class="margin-l-20 margin-t-10" style="font-size: 15px;">
+                                                    <span class="dc-detail-start-date">18.12.11</span>
+                                                    <span>~</span>
+                                                    <span class="dc-detail-end-date">18.12.31</span>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        </a>
+                                    </div>    
+                                </div>  
+                            </li>
+                            <li>
+                                <div>
+                                    <div class="dc-image-border">
+                                        <a href="detail">
+                                            <div class="margin-20 dc-image-container">
+                                                    <img class="dc-title-image" src="/muzihokhamsave/WebContent/image/hokdc/brand/kfc.jpg" alt="이미지"/>
+                                            </div>
+                                        <div>
+                                            <div class="margin-10 dc-title">
+                                                <!-- <span class="margin-r-10" style="font-weight: bold; ">[무지]</span><br> -->
+                                                <span class="dc-detail-title" style="font-weight: bold;">무지혹 20% 세일!무지혹 20% 세일!무지혹 20% 세일!</span>
+                                            </div>
+                                            <div class="margin-b-10 flex dc-image-top-border">
+                                                <div class="margin-l-20 margin-t-10" style="font-size: 15px;">
+                                                    <span class="dc-detail-start-date">18.12.11</span>
+                                                    <span>~</span>
+                                                    <span class="dc-detail-end-date">18.12.31</span>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        </a>
+                                    </div>    
+                                </div>  
+                            </li>
+                            <li>
+                                <div>
+                                    <div class="dc-image-border">
+                                        <a href="detail">
+                                            <div class="margin-20 dc-image-container">
+                                                    <img class="dc-title-image" src="/muzihokhamsave/WebContent/image/hokdc/brand/kfc.jpg" alt="이미지"/>
+                                            </div>
+                                        <div>
+                                            <div class="margin-10 dc-title">
+                                                <!-- <span class="margin-r-10" style="font-weight: bold; ">[무지]</span><br> -->
+                                                <span class="dc-detail-title" style="font-weight: bold;">무지혹 20% 세일!무지혹 20% 세일!무지혹 20% 세일!</span>
+                                            </div>
+                                            <div class="margin-b-10 flex dc-image-top-border">
+                                                <div class="margin-l-20 margin-t-10" style="font-size: 15px;">
+                                                    <span class="dc-detail-start-date">18.12.11</span>
+                                                    <span>~</span>
+                                                    <span class="dc-detail-end-date">18.12.31</span>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        </a>
+                                    </div>    
+                                </div>  
+                            </li>
+                            <li>
+                                <div>
+                                    <div class="dc-image-border">
+                                        <a href="detail">
+                                            <div class="margin-20 dc-image-container">
+                                                    <img class="dc-title-image" src="/muzihokhamsave/WebContent/image/hokdc/brand/kfc.jpg" alt="이미지"/>
+                                            </div>
+                                        <div>
+                                            <div class="margin-10 dc-title">
+                                                <!-- <span class="margin-r-10" style="font-weight: bold; ">[무지]</span><br> -->
+                                                <span class="dc-detail-title" style="font-weight: bold;">무지혹 20% 세일!무지혹 20% 세일!무지혹 20% 세일!</span>
+                                            </div>
+                                            <div class="margin-b-10 flex dc-image-top-border">
+                                                <div class="margin-l-20 margin-t-10" style="font-size: 15px;">
+                                                    <span class="dc-detail-start-date">18.12.11</span>
+                                                    <span>~</span>
+                                                    <span class="dc-detail-end-date">18.12.31</span>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        </a>
+                                    </div>    
+                                </div>  
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="pager">
+                        <div class="block-wrapping"><input type="button" value=" " class="btn prev-btn"/></div>
+                        <div class="block-wrapping">
+                            <ul class="list">
+                                <li><a href="">1</a></li>
+                                <li><a href="">2</a></li>
+                                <li><a href="">3</a></li>
+                            </ul>
+                        </div>
+                        <div class="block-wrapping"><input type="button" value=" " class="btn next-btn"/></div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="map_wrap">
+               <div id="map"></div>
+               <div class="hAddr">
+                  <span class="title">지도중심기준 행정동 주소정보</span>
+                  <span id="centerAddr"></span>
+                  <div><input type="button" name="loc" class="myloc" /></div>
+               </div>
+
+               <div id="menu_wrap" class="bg_white">
+                  <div class="option">
+                     <div>
+                        <form onsubmit="searchPlaces(); return false;">
+                           <input type="text" id="keyword" size="15">
+                           <button type="submit">검색하기</button>
+                        </form>
+                     </div>
+                  </div>
+                  <hr>
+                  <ul id="placesList"></ul>
+                  <div id="pagination"></div>
+               </div>
+            </div>
+         </div>
+         <div class="aside-container">ASIDE</div>
+      </div>
+   </div>
+   <footer>
+      <div class="content-container">
+         FOOTER
+      </div>
+   </footer>
+
+   <script src="hokmap.js"></script>
+</body>
+
+</html>
