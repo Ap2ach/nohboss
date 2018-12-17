@@ -5,7 +5,7 @@
         <wb-resource deploy-path="/WEB-INF/classes" source-path="/src/main/java"/>
         <wb-resource deploy-path="/WEB-INF/classes" source-path="/src/test/resource"/>
         <wb-resource deploy-path="/WEB-INF/classes" source-path="/src/main/resource"/>
-        <property name="context-root" value="nohboss"/>
         <property name="java-output-path" value="/nohboss/target/classes"/>
+        <property name="context-root" value="/"/>
     </wb-module>
 </project-modules>
