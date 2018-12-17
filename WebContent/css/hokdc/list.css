@@ -1,0 +1,167 @@
+/* 공동 템플릿 세팅 +헤더*/
+@import url("/WebContent/css/inc/common.css");
+/* ------------------------검색창---------------------------------- */
+@import url("/WebContent/css/inc/searchform.css");
+/* ---------------------어사이드--------------------------------------- */
+@import url("/WebContent/css/inc/asidelist.css");
+
+@import url("/WebContent/css/inc/pager.css");
+
+/* ---------------------어사이드--------------------------------------- */
+aside{
+    top:65px;
+}
+/* ---------------------메인바디--------------------------------------- */
+#main-body{
+    width:inherit;
+}
+
+
+/* ------------------메인바디 디테일전용-------------------------- */
+#main-body .dc-detail-header{
+    width: inherit;
+    height: 90px;
+    line-height: 90px;
+    font-size: 20px; 
+    /* vertical-align: middle; */
+    color:white;
+    font-weight: bold;
+    border: rgb(95, 86, 95) 0px solid;
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px;
+    background-color:rgb(95, 86, 95); 
+}
+
+#main-body .dc-detail-header .dc-detail-brand-logo{
+    width:70px;
+    height:70px;
+    border-radius: 5px;
+    margin:10px;
+}
+#main-body .dc-detail-header div{
+    margin-left:10px;
+    margin-right:10px;
+    width:inherit;
+}
+/* ------------------메인바디 리스트전용-------------------------- */
+
+#main-body .dc-container{
+    width:inherit;
+    height:1020px;
+}
+
+#main-body img.dc-title-image{
+    max-height:100%;
+    height:inherit;
+    width:inherit;
+    max-width:100%;
+    border-radius: 5px;
+}
+#main-body .dc-catagory-name{
+    margin-top:100px !important;
+}
+#main-body .dc-category-title{
+    width: inherit;
+    height: 90px;
+    line-height: 90px;
+    font-size: 30px; 
+    color:white;
+    font-weight: bold;
+    border: rgb(95, 86, 95) 0px solid;
+    border-top-left-radius: 5px; 
+     border-top-right-radius: 5px;
+    background: rgb(95, 86, 95);
+    
+    /* border-radius: 50px; */
+}
+#main-body .dc-category-content{
+    width:inherit;
+    height:930px;
+    background-color:rgb(246, 219, 218);
+    /* border-bottom:rgb(246, 219, 218) 1px solid; */
+    /* border-left:rgb(182, 170, 170) 1px solid;
+    border-right:rgb(182, 170, 170) 1px solid; */
+    border-bottom-left-radius: 5px;
+    border-bottom-right-radius: 5px;
+}
+#main-body .dc-category-content-customer{
+    height:930px;
+    text-align: center;
+    display:flex;
+    font-size:30px;
+    background-color:rgb(246, 219, 218);
+    font-weight: bold;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+#main-body .dc-image-border{
+    border:ivory 1px solid;
+    background-color:ivory;
+    border-radius: 15px;
+    position:relative;
+}
+#main-body .dc-image-border a:hover{
+    color:coral;
+}
+
+#main-body .dc-title{
+    height:40px;
+    overflow: hidden;
+    /* text-overflow: ellipsis; */
+    /* white-space: nowrap; */
+}
+
+#main-body .dc-detail-title:o{
+    color:coral;
+}
+
+#main-body .dc-image-container{
+    height:230px;
+    width:230px;
+}
+.item-dc-list{
+    height:830px;
+}
+.item-dc-list ul{
+    width:930px;
+    height:inherit;
+    /* margin-left: auto;
+    margin-right: auto; */
+    margin:auto;
+}
+.item-dc-list li{
+    width:270px;
+    height:360px;
+    float:left;
+    margin:20px 20px;
+}
+
+
+
+/* ----------------------체크박스 하트 박기 ------------------------------- */
+
+.checkbox-wrap{
+    cursor: pointer !important;
+}
+.checkbox-wrap{
+    position:absolute;
+    right:20px;top:0px;
+    
+}
+.checkbox-wrap label{
+    cursor: pointer !important;
+    display:inline-block;
+    width:24px;
+    height:24px;
+    background:url("/WebContent/image/icon/like-24.png") no-repeat;
+    vertical-align: middle;
+    transition-duration: .3s;
+}
+.checkbox-wrap input[type=checkbox]{
+    display: none !important;
+}
+.checkbox-wrap input[type=checkbox]:checked+ label{
+    background: url("/WebContent/image/icon/likechk-24.png") no-repeat !important;
+}
+/* ------------------------------------버튼------------------------------------------ */

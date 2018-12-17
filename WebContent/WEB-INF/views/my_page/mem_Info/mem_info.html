@@ -1,0 +1,106 @@
+<!-- <%@ page language="java" contentType="text/html; charset=UTF-8"
+    pageEncoding="UTF-8"%> -->
+    <!DOCTYPE html>
+    <html>
+        <head>
+            <meta charset="UTF-8">
+            <title>샘플페이징</title>
+            <style>
+                ul,li,html{
+                    padding:0px;
+                    margin:0px;
+                }
+    
+                body{
+                    background:rgb(0, 207, 207);
+                }
+                header{
+                    height:200px;
+                    background:rgb(50, 110, 145);
+                }
+                #visual{
+                    height:400px;
+                    background:rgb(230, 106, 5);
+                }
+                #body{
+                    min-height:900px;
+                    background:rgb(6, 221, 78);
+                }
+                footer{
+                    height:200px;
+                    background:rgb(235, 8, 216);
+                }
+                
+                
+                
+                .content-container{
+                    width:1600px;
+                    height:inherit;
+                    background-color:violet; 
+                    margin-left: auto;
+                    margin-right: auto;
+                    position: relative;
+                }
+                #body .content-container{
+                    min-height: inherit;
+                    background:turquoise;
+                }
+                #visual .content-container{
+                    background:tomato;
+                }
+                footer .content-container{
+                    background: wheat;
+                }
+    
+                #body .aside-container{
+                    position: relative;
+                    width:300px;
+                    background-color:hotpink; 
+                }
+                #body .main-container{
+                    position: relative;
+                    width:1000px;
+                    background-color:yellow; 
+                }
+    
+                ul{
+                    margin-left: 30%;
+                }
+                ul li{
+                    display:inline;
+                    line-height:200px;
+                }
+    
+            </style>
+        </head>
+        <body>
+            <header>
+                <div class="content-container" style="display:flex;">
+                    <img src="../../../../image/logo.png" width=200px height=200px>
+    
+                    <ul>
+                        <li>혹한할인</li>
+                        <li>혹할지도</li>
+                        <li>혹혹혹</li>
+                    </ul>
+                </div>
+            </header>
+            <div id="visual">
+                <div class="content-container">
+                    VISUAL
+                </div>
+            </div>
+            <div id="body">
+                <div class="content-container" style="display:flex;">
+                    <div class="aside-container">ASIDE</div>
+                    <div class="main-container">MAIN</div>
+                    <div class="aside-container">ASIDE</div>
+                </div>
+            </div>
+            <footer>
+                <div class="content-container">
+                    FOOTER
+                </div>
+            </footer>
+        </body>
+    </html>

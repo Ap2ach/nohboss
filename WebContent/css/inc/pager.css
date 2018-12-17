@@ -1,0 +1,20 @@
+/* ------------------------페이저-------------------------------------------------- */
+#main-body .pager{
+    text-align: center;
+    height:100px;
+    line-height:100px !important;
+}
+
+.pager .btn{
+    border:none;
+    width:24px;
+    height:24px;
+}
+.pager .prev-btn{
+    /* cursor: pointer; */
+    background: url(/WebContent/image/icon/left-arrow.png);
+}
+.pager .next-btn{
+    /* cursor: pointer; */
+    background: url(/WebContent/image/icon/right-arrow.png);
+}

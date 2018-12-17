@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8" name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" type="text/css" media="screen" href="/WebContent/css/my_page/main.css"/>
+        <title>내가쓴 글 목록</title>
+    </head>
+    <body>
+        <header>
+            <div class="content-container flex">
+                <div class="header-logo-container">
+                    <a href=""><img src="/WebContent/image/logo.png" width=166px height=70px></a>
+                </div>
+                <div class="header-main-container">
+                    <nav>
+                        <h1 class="hidden">메인메뉴</h1>
+                        <ul>
+                            <li class="hok-hover hokdc"><a href="#">DISCOUNT</a></li>
+                            <li class="hok-hover hokmap"><a href="#">HOK! MAP</a></li>
+                            <li class="hok-hover hokhok"><a href="#">HOK! HOK!</a></li>
+                            <li class="hok-hover hokcus"><a href="#"> CENTER</a></li>
+                        </ul>
+                    </nav>
+                </div>
+                <div class="header-sub-container">
+                    <nav>
+                        <h1 class="hidden">로그인</h1>
+                        <ul>
+                            <li class=""><a href="">LOGIN</a></li>
+                            <li class=""><a href="">REGIST</a></li>
+                        </ul>
+                    </nav>
+                </div>  
+            </div>
+        </header>
+        <div id="visual">
+            <div class="content-container">
+                <section id="search-form" >
+                    <h1 class="hidden">비쥬얼검색창</h1>
+                        <div>
+                            <input type="text" minlength="1 "maxlength="10" placeholder="검색어를 입력하세요" class="margin-r-20" />
+                            <input class="btn " type="submit" value=" " alt="검색" />
+                        </div>
+                </section>
+            </div>
+        </div>
+
+        <div id="body">
+            <div class="content-container" style="display:flex;">
+                <div class="body-aside-container">
+                    <aside>
+                        <h1 class="hidden">메뉴바</h1>
+                        <div class="boxing">
+                            <div class="boxing-title">회원정보</div>
+                            <div class="margin-t-20">
+                                <div class="margin-t-10">
+                                    <span>NICKNAME</span>
+                                    <span>(</span>
+                                    <span>아이디</span>
+                                    <span>)</span>
+                                </div>
+                                <div class="margin-t-10">
+                                    <span>since</span>
+                                    <span>2018.02.13</span>
+                                    <span>일반</span>
+                                </div>
+                                <div class="margin-t-10">
+                                    <span>3</span>
+                                    <span>회 경고</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="menu-bar menu-bar-dcmenu margin-r-20" >
+                            <div class="text-center">
+                                <div class="menu-bar-category">
+                                        MyPage
+                                </div>
+                                <div>
+                                    <ul class="hover-back">
+                                        <a href=""><li class="">My News <span>(0)</span></li></a>
+                                        <a href=""><li class="now">My Board</li></a>
+                                        <a href=""><li class="">My Wish</li></a>
+                                        <a href=""><li class="">My Q&A</li></a>
+                                        <a href=""><li class="">My Info</li></a>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </aside>
+                </div>
+                <div class="body-main-container">
+                    <div class="body-main-container">
+                         <section id="main-body">
+                            <h1 class="hidden">바디리스트</h1>
+                            <div>
+                                <div >
+                                    <div class="">
+                                        <ul class="list text-right margin-t-20 margin-b-20 margin-r-20">
+                                            <li><a  href=""><input class="btn home-btn page-path" type="button" value=""/></a></li>
+                                            <li><img class="page-path" src="/WebContent/image/icon/next-16.png" ></li>
+                                            <li class="page-path"><a href="list" >마이페이지</a></li>
+                                            <li><img class="page-path" src="/WebContent/image/icon/next-16.png" ></li>
+                                            <li class="page-path">My Board</li>
+                                        </ul>
+                                    </div>
+                                    
+                                    <!-- 테이블로하자  -->
+                                    <div class=my-page-main-box>
+                                        <div class='flex'>
+                                                <a href=""><div class="tab-btn highlighted">내 글</div></a>
+                                                <a href="comment-list.html"><div class="tab-btn">내 댓글</div></a>
+                                            
+                                        </div>
+                                        <div class="my-page-main-head flex">
+                                            <div class="my-write">
+                                                <form>
+                                                    <select name="초기">
+                                                        <option selected>전체</option>
+                                                        <option>할인</option>
+                                                        <option>혹혹</option>
+                                                        <option>안내</option>
+                                                    </select>
+                                                    <select>
+                                                        <option selected>전체기간</option>
+                                                        <option>1주일 내</option>
+                                                        <option>1개월 내</option>
+                                                        <option>3개월 내</option> 
+                                                    </select>
+                                                    <input class="my-write-text" type="text" value=" "/>
+                                                    <input class="filter-btn btn" type="submit" value=" "/>
+                                                </form>
+                                            </div>
+                                        </div>
+                                        <table class="mypage-table">
+                                            <h1 class="hidden">테이블</h1>
+                                            <tbody class="table-content">
+                                                <tr>
+                                                    <td>[할인]</td>
+                                                    <td class="table-title">
+                                                        <a href="">회원님이 찜하신 브랜드 새로운 이벤트가 등록됐습니다.</a>
+                                                    </td>
+                                                    <td>2018.12.09 17:38</td>
+                                                </tr>
+                                                <tr>
+                                                    <td>[할인]</td>
+                                                    <td class="table-title">
+                                                        <a href="">회원님이 찜하신 브랜드 중 마감임박 행사가 있어요!</a>
+                                                    </td>
+                                                    <td>2018.12.09 17:38</td>
+                                                </tr>
+                                                <tr>
+                                                    <td>[혹혹]</td>
+                                                    <td class="table-title">
+                                                        <a href="">당신의 게시글이 추천받았습니다.</a>
+                                                    </td>
+                                                    <td>2018.12.09 17:38</td>
+                                                </tr>
+                                                <tr>
+                                                    <td>[혹혹]</td>
+                                                    <td class="table-title">
+                                                        <a href="">당신의 댓글이 추천받았습니다.</a>
+                                                    </td>
+                                                    <td>2018.12.09 17:38</td>
+                                                </tr>
+                                            </tbody>
+                                        </table>
+                                        <div class="pager">
+                                            <div class="block-wrapping"><input type="button" value=" " class="btn prev-btn"/></div>
+                                            <div class="block-wrapping">
+                                                <ul class="list">
+                                                    <li><a href="">1</a></li>
+                                                    <li><a href="">2</a></li>
+                                                    <li><a href="">3</a></li>
+                                                </ul>
+                                            </div>
+                                            <div class="block-wrapping"><input type="button" value=" " class="btn next-btn"/></div>
+                                        </div>
+                                    </div>
+
+                                </div>
+                            </div>
+                        </section>
+                    </div>
+                </div>
+                <div class="body-aside-container"></div>
+            </div>
+        </div>
+        <footer>
+            <div class="content-container">
+                FOOTER
+            </div>
+        </footer>
+    </body>
+</html>

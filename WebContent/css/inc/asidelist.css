@@ -1,0 +1,33 @@
+/* --------------------aside 메뉴창  태진 작업  --------------------*/
+aside{
+    width:240px;
+    margin:0px auto;
+}
+aside .menu-bar{
+    font-size:25px;
+    line-height: 70px;
+    background-color:rgb(246, 219, 218); 
+    border-radius: 5px;
+}
+aside .menu-bar-dcmenu{
+    width:240px;
+}
+aside .menu-bar-card{
+    width:300px;
+}
+aside .menu-bar-category{
+    line-height:100px;
+    background-color:rgb(95, 86, 95); 
+    color:rgb(255, 255, 255); 
+    font-weight: bold;
+    font-size:27px;
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px;
+}
+
+aside .hover-back a:hover{
+    color: coral;
+    animation: 1s underline forwards ;
+    transition:all 1s ease; 
+    font-weight: bold;
+}

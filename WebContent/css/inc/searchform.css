@@ -1,0 +1,33 @@
+/* ------------------------검색창---------------------------------- */
+#search-form{
+    text-align: center;
+    height:inherit;
+    display:flex;
+    justify-content: center;
+    align-items: center;
+}
+#search-form input[type=text]{
+   
+    border:none;
+    border-radius: 5px;
+    width:550px; 
+    height:30px;
+    font-size:15px;
+    font-weight: bold;
+    text-align: center;
+}
+#search-form input[type=text]:focus{
+   outline:none;
+}
+#search-form input[type=text]:focus::-webkit-input-placeholder{
+    color:transparent;
+ }
+
+#search-form .btn{
+    cursor: pointer;
+    border:none;
+    width:32px;
+    height:32px;
+    background: url("/WebContent/image/icon/zoom-in-64.png");
+    background-size: cover;
+}
