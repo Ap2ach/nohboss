@@ -14,6 +14,8 @@ public class DcListController extends HttpServlet{
  @Override
 protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 	// TODO Auto-generated method stub
+	 
+	 
 	 request.setCharacterEncoding("UTF-8");
 	RequestDispatcher dispatcher = request.getRequestDispatcher("/WEB-INF/views/hokdc/list.jsp");
 	dispatcher.forward(request, response);

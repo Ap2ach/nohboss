@@ -9,6 +9,7 @@
     font-size: 20px;
     border-spacing: 0px;
     table-layout: fixed;
+    padding:10px;
 }
 
 .table-title td{
