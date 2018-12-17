@@ -5,14 +5,15 @@
     display:flex;
     justify-content: center;
     align-items: center;
+  
 }
 #search-form input[type=text]{
-   
-    border:none;
+ 
+    border: rgb(95, 86, 95) solid 1px;
     border-radius: 5px;
     width:550px; 
-    height:30px;
-    font-size:15px;
+    height:35px;
+    font-size:12px;
     font-weight: bold;
     text-align: center;
 }
