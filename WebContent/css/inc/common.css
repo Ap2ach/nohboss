@@ -262,7 +262,7 @@ footer .content-container{
 
 /* ---------------------이동경로----------------------------------------- */
 .home-btn{
-    background: url(/image/icon/home-24.png);
+    background: url(/WebContent/image/icon/home-24.png);
     border:none;
     width:24px;
     height:24px;

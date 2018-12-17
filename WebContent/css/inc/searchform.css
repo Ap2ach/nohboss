@@ -28,6 +28,6 @@
     border:none;
     width:32px;
     height:32px;
-    background: url("/image/icon/zoom-in-64.png");
+    background: url("/WebContent/image/icon/zoom-in-64.png");
     background-size: cover;
 }
