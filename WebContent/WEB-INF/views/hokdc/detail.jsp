@@ -1,15 +1,17 @@
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+    pageEncoding="UTF-8"%>
 <!DOCTYPE html>
 <html>
     <head>
         <meta charset="UTF-8" name="viewport" content="width=device-width, initial-scale=1">
         <link rel="stylesheet" type="text/css" media="screen" href="/css/hokdc/list.css"/>
-        <title>혹한할인</title>
+        <title>혹한할인?!</title>
     </head>
     <body>
         <header>
             <div class="content-container flex">
                 <div class="header-logo-container">
-                    <a href=""><img src="/WebContent/image/logo.png" width=166px height=70px></a>
+                    <a href=""><img src="/image/logo.png" width=166px height=70px></a>
                 </div>
                 <div class="header-main-container"> 
                     <nav>
@@ -78,9 +80,9 @@
                                 <div class="">
                                     <ul class="list text-right margin-t-20 margin-b-20 margin-r-20">
                                         <li><a  href=""><input class="btn home-btn page-path" type="button" value=""/></a></li>
-                                        <li><img class="page-path" src="/WebContent/image/icon/next-16.png" ></li>
+                                        <li><img class="page-path" src="/image/icon/next-16.png" ></li>
                                         <li class="page-path"><a href="list" >혹한할인!</a></li>
-                                        <li><img class="page-path" src="/WebContent/image/icon/next-16.png" ></li>
+                                        <li><img class="page-path" src="/image/icon/next-16.png" ></li>
                                         <li class="page-path">편의점</li>
                                     </ul>
                                 </div>
@@ -88,7 +90,7 @@
                                 <div class="">
                                         <div class="dc-detail-header flex">
                                             <div>
-                                                <img class="dc-detail-brand-logo"  src="/WebContent/image/brand/family/vips.jpg">
+                                                <img class="dc-detail-brand-logo"  src="/image/brand/family/vips.jpg">
                                             </div>
                                             <div class="dc-detail-title" >텐더 3 핫윙3 3,500원! </div>
                                             <div class="dc-detail-start-date">(12/11</div>
@@ -98,11 +100,11 @@
                                         </div>
                                         <div class="">
                                             <ul class="list text-right margin-t-20 margin-b-20" style="width:930px;">
-                                                <li><img src="/WebContent/image/icon/eye-24.png" class="page-path" /></li>
+                                                <li><img src="/image/icon/eye-24.png" class="page-path" /></li>
                                                 <li class="page-path">100</li>
-                                                <li><img src="/WebContent/image/icon/calendar-24.png" class="page-path"></li>
+                                                <li><img src="/image/icon/calendar-24.png" class="page-path"></li>
                                                 <li class="page-path">2018-12-12</li>
-                                                <li><img class="page-path" src="/WebContent/image/icon/likechk-24.png"></li>
+                                                <li><img class="page-path" src="/image/icon/likechk-24.png"></li>
                                             </ul>
                                             <hr/><br><br><br><br>
                                         </div>

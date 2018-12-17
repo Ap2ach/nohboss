@@ -12,9 +12,9 @@
 }
 .pager .prev-btn{
     /* cursor: pointer; */
-    background: url(/WebContent/image/icon/left-arrow.png);
+    background: url(/image/icon/left-arrow.png);
 }
 .pager .next-btn{
     /* cursor: pointer; */
-    background: url(/WebContent/image/icon/right-arrow.png);
+    background: url(/image/icon/right-arrow.png);
 }

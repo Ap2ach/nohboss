@@ -1,11 +1,11 @@
 /* 공동 템플릿 세팅 +헤더*/
-@import url("/WebContent/css/inc/common.css");
+@import url("/css/inc/common.css");
 /* ------------------------검색창---------------------------------- */
-@import url("/WebContent/css/inc/searchform.css");
+@import url("/css/inc/searchform.css");
 /* ---------------------어사이드--------------------------------------- */
-@import url("/WebContent/css/inc/asidelist.css");
+@import url("/css/inc/asidelist.css");
 
-@import url("/WebContent/css/inc/pager.css");
+@import url("/css/inc/pager.css");
 
 /* ---------------------어사이드--------------------------------------- */
 aside{
@@ -154,7 +154,7 @@ aside{
     display:inline-block;
     width:24px;
     height:24px;
-    background:url("/WebContent/image/icon/like-24.png") no-repeat;
+    background:url("/image/icon/like-24.png") no-repeat;
     vertical-align: middle;
     transition-duration: .3s;
 }
@@ -162,6 +162,6 @@ aside{
     display: none !important;
 }
 .checkbox-wrap input[type=checkbox]:checked+ label{
-    background: url("/WebContent/image/icon/likechk-24.png") no-repeat !important;
+    background: url("/image/icon/likechk-24.png") no-repeat !important;
 }
 /* ------------------------------------버튼------------------------------------------ */

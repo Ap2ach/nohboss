@@ -1,7 +1,6 @@
 /* -----------------------------------초기 기본 세팅------------------------------------------------------------------ */
 
 @media (max-width: 768px){
-    body{color:red;}
 }
 html{
     overflow: scroll;
@@ -263,7 +262,7 @@ footer .content-container{
 
 /* ---------------------이동경로----------------------------------------- */
 .home-btn{
-    background: url(/WebContent/image/icon/home-24.png);
+    background: url(/image/icon/home-24.png);
     border:none;
     width:24px;
     height:24px;
