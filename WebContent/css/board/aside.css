@@ -1,0 +1,52 @@
+@charset "UTF-8";
+
+#aside{
+    min-height: inherit;
+    height: inherit;
+    min-width: 300px;
+    padding: 30 0 30 30;
+}
+
+
+/*--------aside-container---------------------------*/
+.aside-container{
+    width: inherit;
+    height: inherit;
+}
+
+
+
+/*--------aside-category------------------------------*/
+.aside-category{
+    background: #332a2a;
+    height: 450px;
+    padding:20px;
+}
+
+.aside-category h1{
+    color:#ffffff;
+    line-height: 200px;
+    text-align: center;
+    font-size: 40px;
+    font-weight: normal;
+    border: 1px solid #e3e3e3;
+    background: url("../../image/board/한식.jpg") no-repeat top;
+}
+
+.aside-category li{
+    line-height: 70px;
+    font-size: 20px;
+    text-indent: 20px;
+    border-bottom: 1px solid #c7c2c2;
+}
+
+.aside-category li:hover{
+    
+    border-bottom: 1px solid #f68500!important;
+}
+
+.aside-category li a{
+    display: block;
+    color:#e5e5e5;
+    width:100%;
+}

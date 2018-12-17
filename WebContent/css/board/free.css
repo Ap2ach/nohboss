@@ -1,0 +1,51 @@
+@charset "UTF-8";
+
+@import url(basic.css);
+
+/* --------table--------------------------------- */
+
+.table{
+    width: 100%;
+    font-size: 20px;
+    border-spacing: 0px;
+    table-layout: fixed;
+}
+
+.table-title td{
+    border-right: 1px dashed #e3e3e3;
+    border-bottom: 1px solid #e3e3e3;
+    text-align: center;
+    background: #e3e3e3;
+}
+
+.table-title td:nth-child(1),
+.table-title td:nth-child(5),
+.table-title td:nth-child(6){
+    height: 45px;
+    width: 80px;
+}
+
+.table-title td:nth-child(3),
+.table-title td:nth-child(4){
+    width:130px;
+}
+
+.table-content td{
+    border-right: 1px dashed #e3e3e3;
+    border-bottom: 1px solid #e3e3e3;
+    line-height: 50px;
+    font-size: 20px;
+    text-align: center;
+}
+
+.table-content td:nth-child(2){
+    text-align: left;
+}
+
+
+.table-content-overflow{
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+}
+

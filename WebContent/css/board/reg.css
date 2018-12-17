@@ -1,0 +1,130 @@
+@charset "UTF-8";
+
+@import url(basic.css);
+
+/*-------reg-board--------------------*/
+.reg-board{
+    width:90%;
+    margin:50px;
+}
+
+.reg-header{
+    margin-bottom: 20px;
+}
+
+.reg-body{
+    border:1px solid;
+    font-size:17px;
+}
+
+.reg-body dl{
+    display: flex;
+    margin:0px;
+    border-bottom: 1px solid;
+}
+
+.reg-body dt{
+   text-align: center;
+   width: 200px;
+   border-right: 1px solid;
+   background: blanchedalmond;
+} 
+
+.reg-body dd{
+    margin:0px;
+    width:100%;
+    padding:5px;
+    border-right: 1px solid;
+}
+
+.reg-body input{
+    border:1px solid;
+    width:100%;
+}
+
+/*----------------------------------*/
+.reg-choice{
+    line-height: 30px;
+    height: 30px;
+}
+
+
+.reg-choice select{
+    height: 20px;
+}
+
+
+.reg-title{
+    line-height: 40px;
+    height: 40px;
+}
+
+
+.reg-title input{
+    height: 30px;
+    font-size:15px;
+    padding:5px;
+}
+
+.reg-file{
+    line-height: 30px;
+    height: 30px;
+}
+
+.reg-file input{
+    height: 20px;
+    border:none;
+}
+
+.reg-content{
+    height: 200px;
+    line-height: 200px;
+}
+
+
+.reg-content textarea{
+    width:100%;
+    height: 190px;
+    font-size:15px;
+    padding:5px;
+}
+
+.reg-tag{
+    line-height: 40px;
+    height: 40px;
+}
+
+.reg-tag input{
+    padding:5px;
+    height: 30px;
+}
+
+
+.reg-tail{
+    margin-top: 10px;
+    text-align: center;
+}
+
+.reg-tail input{
+    width: 70px;
+    line-height: 40px;
+    height: 40px;
+    font-size:20px;
+    color: #ffffff;
+}
+
+
+.reg-tail input:nth-child(1){
+    background: #646060;
+}
+
+.reg-tail input:nth-child(2){
+    background: #353492;
+}
+
+
+
+
+
+
+

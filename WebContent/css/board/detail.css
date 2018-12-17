@@ -1,0 +1,105 @@
+@charset "UTF-8";
+
+@import url(basic.css);
+
+input{
+    border-radius: 5px;
+}
+
+
+/*------detail-board----------------*/
+.detail-board{
+    width: 90%;
+    margin:50px;
+}
+
+.detail-board>div{
+    border-bottom: 1px solid;
+}
+
+/*-------d-title--------------*/
+.d-title{
+    height: 50px;
+    line-height: 50px;
+    font-size: 30px;
+    padding-left: 20px;
+    background: #b9b9b9;
+}
+
+
+/*-------d-info----------------*/
+.d-info{
+    height: 50px;
+    line-height: 50px;
+    
+    padding-left: 20px;
+}
+
+.d-info div{
+    float: right;
+    display: flex;
+    margin-right: 30px;
+}
+.d-info p{
+    margin-left:20px;
+}
+
+/*--------d-content------------*/
+.d-content{
+    min-height: 200px;
+    padding:20px;
+}
+
+/*--------d-button-------------*/
+.d-button{
+    padding:5px;
+    padding-top: 10px;
+    padding-bottom: 30px;
+    text-align: center;
+}
+
+.d-button>input{
+    width:60px;
+    height: 40px;
+    margin:5px;
+}
+
+/*---------d-reply--------------*/
+
+.d-reply-title{
+    background: #b9b9b9;
+    height: 30px;
+    line-height: 30px;
+    padding-left: 20px;
+}
+
+.d-reply h1{
+    float: left;
+    font-weight: normal;
+    font-size: 15px;
+    margin-right: 5px;
+}
+
+
+
+/*-------d-page-move-------------*/
+.d-page-move{
+    margin-top: 70px;
+}
+
+.d-page-move dl{
+    height: 40px;
+    line-height: 40px;
+    border-top: 1px solid;
+    display: flex;
+}
+
+.d-page-move dt{
+    border-right: 1px solid;
+    width: 70px;
+    text-align: center;
+}
+
+.d-page-move dd{
+    margin-left: 10px;
+}

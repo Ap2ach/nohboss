@@ -1,0 +1,274 @@
+/* -----------------------------------초기 기본 세팅------------------------------------------------------------------ */
+@charset "UTF-8";
+
+@import url(searchform.css);
+
+@media ( max-width : 768px) {
+	body {
+		color: red;
+	}
+}
+
+html {
+	overflow: scroll;
+}
+
+html, body, input, div {
+	padding: 0px;
+	margin: 0px;
+	border: 0px;
+}
+
+h1, h2, h3, h4, h5, h6 {
+	padding: 0px;
+	margin: 0px;
+}
+
+ol, ul, li {
+	list-style-type: none;
+	padding: 0px;
+	margin: 0px;
+}
+
+a {
+	text-decoration: #0f0f00;
+	color: #0f0f00;
+}
+
+body {
+	font-size: 18px;
+	color: #5b5b5b;
+	font-family: 돋움, Arial, Helvetica, sans-serif;
+}
+
+/* -----------------------------------기본 마진 패딩 관련------------------------------------------------------------------ */
+.margin-t-20 {
+	margin-top: 20px !important;
+}
+
+.margin-l-20 {
+	margin-left: 20px !important;
+}
+
+.margin-r-20 {
+	margin-right: 20px !important;
+}
+
+.margin-b-20 {
+	margin-bottom: 20px !important;
+}
+
+.margin-20 {
+	margin: 20px !important;
+}
+
+.margin-10 {
+	margin: 10px !important;
+}
+
+.margin-t-10 {
+	margin-top: 10px !important;
+}
+
+.margin-l-10 {
+	margin-left: 10px !important;
+}
+
+.margin-r-10 {
+	margin-right: 10px !important;
+}
+
+.margin-b-10 {
+	margin-bottom: 10px !important;
+}
+
+.margin-b-40 {
+	margin-bottom: 40px !important;
+}
+
+.text-left {
+	text-align: left !important;
+}
+
+.text-right {
+	text-align: right !important;
+}
+
+.text-center {
+	text-align: center !important;
+}
+
+.padding-l-10 {
+	padding-left: 10px;
+}
+
+.padding-l-20 {
+	padding-left: 20px;
+}
+
+.padding-r-10 {
+	padding-right: 10px;
+}
+
+.padding-r-20 {
+	padding-right: 20px;
+}
+
+.padding-t-10 {
+	padding-top: 10px;
+}
+
+.padding-t-20 {
+	padding-top: 20px;
+}
+
+.padding-b-10 {
+	padding-bottom: 10px;
+}
+
+.padding-b-20 {
+	padding-bottom: 20px;
+}
+/* -----------------래핑하기  ---------------------------------------- */
+.block-wrapping {
+	display: inline-block !important;
+}
+
+.flex {
+	display: flex !important;
+}
+
+.hidden {
+	display: none;
+}
+
+.list li {
+	display: inline;
+	margin-right: 10px;
+}
+
+/* ---------------------------영역나누기--------------------------------------------------------------------------- */
+/* body{
+    background:rgb(0, 207, 207);
+} */
+header {
+	height: 60px;
+	background-color: rgb(95, 86, 95);
+}
+
+#visual {
+	height: 200px;
+	background-color: rgb(246, 219, 218);
+}
+/* #body{
+    min-height:900px;
+    background:rgb(6, 221, 78);
+} */
+footer {
+	height: 200px;
+	/* background:rgb(235, 8, 216); */
+}
+
+.content-container {
+	width: 1600px;
+	height: inherit;
+	/* background-color:violet;  */
+	margin-left: auto;
+	margin-right: auto;
+	position: relative;
+}
+
+header .logo-container {
+	position: relative;
+	width: 300px;
+	/* background-color:red;  */
+}
+
+header .main-container {
+	position: relative;
+	width: 1000px;
+	/* background-color:green;  */
+}
+
+header .sub-container {
+	position: relative;
+	width: 300px;
+	/* background-color:blue;  */
+}
+
+#visual .content-container {
+	/* background:tomato; */
+	
+}
+
+/* #body .content-container{
+    position: relative;
+    min-height: inherit;
+    background:turquoise;
+}
+#body .aside-container{
+    position: relative;
+    width:300px;
+    background-color:hotpink; 
+}
+#body .main-container{
+    position: relative;
+    width:1000px;
+    background-color:yellow; 
+} */
+footer .content-container {
+	background: wheat;
+}
+
+/* -----------------------------------헤더 관련------------------------------------------------------------------ */
+.main-container ul {
+	position: absolute;
+	top: 20px;
+}
+
+.main-container li {
+	display: inline-block;
+	line-height: 30px;
+	border-left: 1px solid #999;
+	padding: 0 49px;
+}
+
+.main-container li:first-child {
+	border-left: none;
+}
+
+.sub-container ul {
+	position: absolute;
+	right: 0px;
+	top: 10px;
+}
+
+.sub-container li {
+	display: inline-block;
+	padding: 0 10px;
+}
+
+.sub-container li:first-child {
+	border-left: none;
+}
+
+.main-container a:hover {
+	color: coral;
+	animation: 0.5s underline forwards;
+	transition: all 0.5s ease;
+}
+
+.sub-container a:hover {
+	color: coral;
+	animation: 1s underline forwards;
+	transition: all 1s ease;
+}
+
+.main-container a, .sub-container a {
+	color: white;
+	text-decoration: none;
+	font-weight: bold;
+}
+/* .main-container a,.sub-container a:visited{
+    color:coral;
+} */
