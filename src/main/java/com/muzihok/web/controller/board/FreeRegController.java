@@ -10,16 +10,15 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
 
-@WebServlet("/board/free")
+@WebServlet("/board/free/reg")
 
 public class FreeRegController extends HttpServlet{
 
 	@Override
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		// TODO Auto-generated method stub
-
 			
-		RequestDispatcher dispatcher = request.getRequestDispatcher("/WEB-INF/views/board/free/list.jsp");
+		RequestDispatcher dispatcher = request.getRequestDispatcher("/WEB-INF/views/board/free/reg.jsp");
 		dispatcher.forward(request, response);
 	}
 

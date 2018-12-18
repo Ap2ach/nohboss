@@ -12,7 +12,7 @@ body{
     min-height: 400px;
 }
 
-h1, body, ul, li, a, form, input, p, dl{
+h1, body, ul, li, a, form, input, p, dl, dd, textarea{
     margin:0px;
     padding:0px;
     border: 0px;

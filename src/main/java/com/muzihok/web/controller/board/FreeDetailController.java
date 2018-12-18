@@ -10,7 +10,7 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
 
-@WebServlet("/board/free")
+@WebServlet("/board/free/detail")
 
 public class FreeDetailController extends HttpServlet{
 
@@ -19,7 +19,7 @@ public class FreeDetailController extends HttpServlet{
 		// TODO Auto-generated method stub
 
 			
-		RequestDispatcher dispatcher = request.getRequestDispatcher("/WEB-INF/views/board/free/list.jsp");
+		RequestDispatcher dispatcher = request.getRequestDispatcher("/WEB-INF/views/board/free/detail.jsp");
 		dispatcher.forward(request, response);
 	}
 
