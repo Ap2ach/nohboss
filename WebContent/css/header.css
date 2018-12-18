@@ -1,0 +1,165 @@
+/* 승래 ================================================================ */
+.topbar{
+    
+}
+.menu-lists{
+    background: rgba(37, 4, 4, 0.5);
+    height: 60px;
+    position: relative;
+    text-align: center;
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0px;
+   
+}
+nav ul li{
+display: inline;
+border-left:1px solid #999;
+padding:0 50px;
+}
+nav ul li:first-child{
+    border-left:none;
+} 
+
+.logo{
+background: url("../image/logo.png") no-repeat center;
+width: 166px;
+height: 60px;
+background-size: cover;
+
+
+}
+
+.visit-main a:visited{
+    color: coral;
+}
+
+.hok-hover a:hover{
+    color:coral;
+    left: 100%;
+    right: 100%;
+    animation: 0.5s underline forwards ;
+    transition:all 0.5s ease; 
+}
+.hok-hover a{
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+ 
+}
+
+/* 리셋 ============================================================= */
+
+ul{
+    list-style: none;
+}
+/* 마진============================================================== */
+.hidden{
+    display: none;
+}
+.margin-t-20{
+    margin-top:20px !important;
+}
+.margin-l-20{
+    margin-left:20px !important;
+}
+.margin-r-20{
+    margin-right:20px !important;
+}
+.margin-b-20{
+    margin-bottom:20px !important;
+}
+.margin-20{
+    margin:20px !important;
+}
+
+.margin-10{
+    margin:10px !important;
+}
+
+.margin-t-10{
+    margin-top:10px !important;
+}
+.margin-l-10{
+    margin-left:10px !important;
+}
+.margin-r-10{
+    margin-right:10px !important;
+}
+.margin-b-10{
+    margin-bottom:10px !important;
+}
+.margin-b-40{
+    margin-bottom:40px !important;
+}
+
+/* --------------------------------------------------------- */
+header{
+    background-color:rgb(246, 219, 218); 
+}
+#search-form .text-center{
+    height:64px;
+    line-height: 64px;
+    text-align: center;
+    height:300px;
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0px;
+}
+#search-form input[type=text]{
+   
+    border:none;
+    border-radius: 5px;
+    width:550px; 
+    height:30px;
+    font-size:15px;
+    font-weight: bold;
+    text-align: center;
+}
+#search-form input[type=text]:focus{
+   outline:none;
+}
+#search-form input[type=text]:focus::-webkit-input-placeholder{
+    color:transparent;
+ }
+ /* 태진 버튼 ============================================= */
+ .btn{
+    cursor: pointer;
+}
+#search-form .btn{
+    border:none;
+    width:32px;
+    height:32px;
+    background: url("../image/hokdc/icon/zoom-in.png");
+    background-size: cover;
+}
+/* ------------------------------------------------------------ */
+
+ /* == 헤더 ============================================================== */
+
+    /* ---login-bar-------------- */
+    .login-lists ul{
+        flex-grow: 1;
+        list-style: none;
+        display: flex;
+    }
+    .login-lists .btn{
+        padding-right: 10px;
+    }
+    .login-lists a{
+        color: white;
+        text-decoration: none;
+    }
+    .login-lists a:hover{
+        color: coral;
+        animation: 1s underline forwards ;
+        transition:all 1s ease; 
+    }
+
+    .login-lists{
+        opacity: 1;
+        position: absolute;
+        left: 70%;
+    }

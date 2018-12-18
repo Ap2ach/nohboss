@@ -12,12 +12,13 @@ import javax.servlet.http.HttpServletResponse;
 
 @WebServlet("/board/free")
 
-public class FreeController extends HttpServlet{
+public class FreeDetailController extends HttpServlet{
 
 	@Override
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		// TODO Auto-generated method stub
-		
+
+			
 		RequestDispatcher dispatcher = request.getRequestDispatcher("/WEB-INF/views/board/free/list.jsp");
 		dispatcher.forward(request, response);
 	}

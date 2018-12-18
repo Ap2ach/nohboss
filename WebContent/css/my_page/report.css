@@ -54,8 +54,8 @@ aside .boxing-title{
 }
 
 #main-body .my-page-main-box{
-    min-height:600px;
-    width:inherit;
+    min-height:700px;
+    width:100%;
     text-align: center;
     background-color:rgb(246, 219, 218);
     font-weight: bold;
@@ -110,42 +110,42 @@ aside .boxing-title{
 }
 
 /* -------------------------------------테이블 ----------------------------- */
-.mypage-table{
-    min-height:50px;
-    width:1000px;
+.my-page-main-box{
+    /* min-height:1000px;
+    width:800px; */
     table-layout: fixed;
     font-size:13px;
     background-color:rgb(246, 219, 218);
     font-weight: bold;
 }
+
 .my-page-main-box td{
-    padding-left:10px;
-    padding-bottom: 20px;
+    padding: 5px 5px;
     overflow: hidden;
     text-overflow: ellipsis;
     white-space: nowrap; 
 }
 
 /* ---------------------write----------------------------------------------------- */
-/* 머릿말 */
+/* 머릿말
 .my-page-main-box tr td:nth-child(1){
     width: 40px;
 }
 /* 제목 */
-.my-page-main-box tr td:nth-child(2){
+/* .my-page-main-box tr td:nth-child(2){
     text-align: left;
     width: 300px !important;
-}
+} */
 
 /* 등록일 */
-.my-page-main-box tr td:nth-child(3){
+/* .my-page-main-box tr td:nth-child(3){
     width: 130px;
-}
+} */
 /* 조회 */
-.my-page-main-box tr td:nth-child(4){
+/* .my-page-main-box tr td:nth-child(4){
     width: 50px;
-}
+} */
 /* 추천 */
-.my-page-main-box tr td:nth-child(5){
+/*.my-page-main-box tr td:nth-child(5){
     width: 50px;
-}
+} */
