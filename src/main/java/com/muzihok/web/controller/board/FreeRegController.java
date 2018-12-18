@@ -10,7 +10,7 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
 
-@WebServlet("/board/free")
+@WebServlet("/board/free/reg")
 
 public class FreeRegController extends HttpServlet{
 
