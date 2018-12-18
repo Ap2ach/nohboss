@@ -199,10 +199,36 @@ footer .content-container{
 }
 
 /* -------------------------------------------버튼----------------------------- */
-.btn{
+.btn, .login-btn{
     outline:none;
     cursor: pointer;
 }
+.login-btn{
+    background: none;
+    border: none;
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+}
+.login-btn:hover{
+    color: coral;
+    animation: 0.5s underline forwards ;
+    transition:all 0.5s ease; 
+}
+.btns{
+    display: flex;
+    line-height: 60px;
+    font-size: 12px;
+}
+.btns a{
+    display: inline;
+    border-left:1px solid white;
+    padding:0 10px;
+}
+.btns button a{
+    border-left:none;
+    }
+
 
 /* ----------------------------위치 관련------------------------------------------ */
 
@@ -282,13 +308,13 @@ footer .content-container{
 #main-body .page-path{
     vertical-align: middle;
 }
-.menu-lists ul li{
+.menu-lists ul li {
     display: inline;
     border-left:1px solid white;
     padding:0 50px;
-    
     
     }
     .menu-lists ul li:first-child{
         border-left:none;
     }
+  
