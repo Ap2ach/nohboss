@@ -1,8 +1,6 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
-    
-    
-    
+  
     
                 <section class="board-tail">
 
@@ -37,14 +35,5 @@
                         </section>
                     </section>
                 </section>
-            </div><!--main-->
-        </section><!--body-container-->
-        
-        <!----footer------------------------------------------------------>
-        <jsp:include page="../inc/footer.jsp" />
-        
-    </div><!--body-->
 
-     <!-- footer----------------------------------------------------------->
-
-</body>
+              

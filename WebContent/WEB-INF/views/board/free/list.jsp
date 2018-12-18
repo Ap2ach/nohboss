@@ -10,15 +10,6 @@
 	<!-- header----------------------------------------------------------->
    	<jsp:include page="../inc/header.jsp" />
    	
-	<!---visual----------------------------------------------------------->
-<!-- 	<div id="visual">
-		<section class="visual-container">
-			<div class="board-title">
-				<span>자유게시판</span>
-			</div>
-		</section>
-	</div> -->
-
 	<!-- body ------------------------------------------------------------>
 	<jsp:include page="../inc/bodyTop.jsp" />
 	
@@ -62,4 +53,7 @@
 				</table>
 				
 				<!--------------------------------------------------------------------------->
-				<jsp:include page="../inc/bodyBottom.jsp" />
+        		<jsp:include page="../inc/bodyBottom.jsp" />
+        		<jsp:include page="../inc/bodyEnd.jsp" />
+        		
+        	
