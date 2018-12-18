@@ -76,8 +76,9 @@
             <div class="header-sub-container">
                 <div class="btns">
                     <h1 class="hidden">로그인</h1>
-                    <button type="button" class="login-btn" id="login-btn"><a href="#">LOGIN</a></button>
+                    <a href="#"  class="login-btn" id="login-btn" >LOGIN</a>
                     <div class=""><a href="">MyPage</a></div>
+                </div>
                 </div>
     </header>
     <!-- The Modal -->
@@ -107,11 +108,11 @@
                                                 role="form" style="display: block;">
                                                 <div class="form-group">
                                                     <input type="text" name="username" id="uid" tabindex="1" class="form-control"
-                                                        placeholder="Username" value="">
+                                                        placeholder="아이디" value="">
                                                 </div>
                                                 <div class="form-group">
                                                     <input type="password" name="password" id="pwd" tabindex="2"
-                                                        class="form-control" placeholder="Password">
+                                                        class="form-control" placeholder="비밀번호">
                                                 </div>
                                                 <div class="form-group text-center">
                                                     <input type="checkbox" tabindex="3" class="" name="remember" id="remember">
@@ -139,21 +140,30 @@
                                             <form id="register-form" action="https://phpoll.com/register/process"
                                                 method="post" role="form" style="display: none;">
                                                 <div class="form-group">
-                                                    <input type="text" name="username" id="username" tabindex="1" class="form-control"
-                                                        placeholder="Username" value="">
+                                                    <input type="text" name="reg-uid" id="userid" tabindex="1" class="form-control"
+                                                        placeholder="아이디" value="">
                                                 </div>
                                                 <div class="form-group">
-                                                    <input type="email" name="email" id="email" tabindex="1" class="form-control"
-                                                        placeholder="Email Address" value="">
+                                                        <input type="text" name="nicname" id="nicname"
+                                                            tabindex="2" class="form-control" placeholder="닉네임">
+                                                    </div>
+                                                
+                                                <div class="form-group">
+                                                    <input type="password" name="reg-pwd" id="reg-pwd" tabindex="2"
+                                                        class="form-control" placeholder="비밀번호" value="">
                                                 </div>
                                                 <div class="form-group">
-                                                    <input type="password" name="password" id="password" tabindex="2"
-                                                        class="form-control" placeholder="Password">
+                                                    <input type="password" name="confirm-pwd" id="confirm-pwd"
+                                                        tabindex="2" class="form-control" placeholder="비밀번호 확인" value="">
                                                 </div>
                                                 <div class="form-group">
-                                                    <input type="password" name="confirm-password" id="confirm-password"
-                                                        tabindex="2" class="form-control" placeholder="Confirm Password">
-                                                </div>
+                                                        <input type="email" name="email" id="email" tabindex="1" class="form-control"
+                                                            placeholder="이메일" value="">
+                                                    </div>
+                                                <div class="form-group">
+                                                        <input type="date" name="birth" id="birth"
+                                                            tabindex="2" class="form-control" min='1899-01-01' max='2018-12-31'>
+                                                    </div>
                                                 <div class="form-group">
                                                     <div class="row">
                                                         <div class="col-sm-6 col-sm-offset-3">

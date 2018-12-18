@@ -1,4 +1,4 @@
-/* ------------------------검색창---------------------------------- */
+/* ------------------------寃��깋李�---------------------------------- */
 #search-form{
    
     height:inherit;
@@ -29,7 +29,7 @@
     border:none;
     width:25px;
     height:25px;
-    background: url("/WebContent/image/icon/zoom-in-64.png");
+    background: url("/image/icon/zoom-in-64.png");
     background-size: cover;
     display:flex;
     margin-left: 460px;

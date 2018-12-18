@@ -1,4 +1,4 @@
-/* -----------------------------------초기 기본 세팅------------------------------------------------------------------ */
+/* -----------------------------------珥덇린 湲곕낯 �꽭�똿------------------------------------------------------------------ */
 
 @media (max-width: 768px){
 }
@@ -37,7 +37,7 @@ hr{
 }
 
 
-/* -----------------------------------기본 마진 패딩 관련------------------------------------------------------------------ */
+/* -----------------------------------湲곕낯 留덉쭊 �뙣�뵫 愿��젴------------------------------------------------------------------ */
 .margin-t-20{
     margin-top:20px !important;
 }
@@ -108,7 +108,7 @@ hr{
 .padding-b-20{
     padding-bottom:20px;
 }
-/* -----------------래핑하기  ---------------------------------------- */
+/* -----------------�옒�븨�븯湲�  ---------------------------------------- */
 .block-wrapping{
     display:inline-block !important;
 }
@@ -125,7 +125,7 @@ hr{
 }
 
 
-/* ---------------------------영역나누기--------------------------------------------------------------------------- */
+/* ---------------------------�쁺�뿭�굹�늻湲�--------------------------------------------------------------------------- */
 
 header{
     height:60px;
@@ -184,12 +184,14 @@ header .header-sub-container{
     min-height: inherit;
     /* background:turquoise; */
 }
-#body .body-aside-container{
-    position: relative;
-    width:300px;
-    /* background-color:hotpink;  */
-}
-#body .body-main-container{
+#body .aside-container{
+     position: relative;
+     width:500px;       
+     border-left: 1px solid rgba(0,0,0,.1);
+     border-right: 1px solid rgba(0,0,0,.1);
+      
+ }
+#body .main-container{
     position: relative;
     width:1000px;
     /* background-color:yellow;  */
@@ -198,12 +200,13 @@ footer .content-container{
     background: wheat;
 }
 
-/* -------------------------------------------버튼----------------------------- */
+/* -------------------------------------------踰꾪듉----------------------------- */
 .btn, .login-btn{
     outline:none;
     cursor: pointer;
 }
 .login-btn{
+
     background: none;
     border: none;
     color: white;
@@ -217,26 +220,27 @@ footer .content-container{
 }
 .btns{
     display: flex;
-    line-height: 60px;
+    top: 20px;
     font-size: 12px;
+    position: absolute;
 }
 .btns a{
     display: inline;
     border-left:1px solid white;
     padding:0 10px;
 }
-.btns button a{
+.btns a:nth-child(2){
     border-left:none;
     }
 
 
-/* ----------------------------위치 관련------------------------------------------ */
+/* ----------------------------�쐞移� 愿��젴------------------------------------------ */
 
 .highlighted{
     color: red;
     font-weight: bold;
 }
-/* -----------------------------------헤더 관련------------------------------------------------------------------ */
+/* -----------------------------------�뿤�뜑 愿��젴------------------------------------------------------------------ */
 .menu-lists{
    
     height: 60px;
@@ -298,7 +302,7 @@ footer .content-container{
     color:coral;
 } */
 
-/* ---------------------이동경로----------------------------------------- */
+/* ---------------------�씠�룞寃쎈줈----------------------------------------- */
 .home-btn{
     background: url(/WebContent/image/icon/home-24.png);
     border:none;
