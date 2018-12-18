@@ -2,7 +2,7 @@
 <html>
     <head>
         <meta charset="UTF-8" name="viewport" content="width=device-width, initial-scale=1">
-        <link rel="stylesheet" type="text/css" media="screen" href="/WebContent/css/my_page/main.css"/>
+        <link rel="stylesheet" type="text/css" media="screen" href="/WebContent/css/my_page/comment.css"/>
         <title>내가쓴 댓글 목록</title>
     </head>
     <body>
@@ -52,7 +52,7 @@
                         <h1 class="hidden">메뉴바</h1>
                         <div class="boxing">
                             <div class="boxing-title">회원정보</div>
-                            <div class="margin-t-20">
+                            <div class="margin-t-20 margin-l-20">
                                 <div class="margin-t-10">
                                     <span>NICKNAME</span>
                                     <span>(</span>
@@ -77,11 +77,11 @@
                                 </div>
                                 <div>
                                     <ul class="hover-back">
-                                        <a href=""><li class="">My News <span>(0)</span></li></a>
-                                        <a href=""><li class="now">My Board</li></a>
-                                        <a href=""><li class="">My Wish</li></a>
-                                        <a href=""><li class="">My Q&A</li></a>
-                                        <a href=""><li class="">My Info</li></a>
+                                            <a href="../news/all-list.html"><li class="">My News <span>(0)</span></li></a>
+                                            <a href="../board/write-list.html"><li class="now">My Board</li></a>
+                                            <a href="../wish/list.html"><li class="">My Wish</li></a>
+                                            <a href="list.html"><li class="">My Q&A</li></a>
+                                            <a href=""><li class="">My Info</li></a>
                                     </ul>
                                 </div>
                             </div>
@@ -107,9 +107,8 @@
                                     <!-- 테이블로하자  -->
                                     <div class=my-page-main-box>
                                         <div class='flex'>
-                                                <a href="write-list.html"><div class="tab-btn">내 글</div></a>
-                                                <a href=""><div class="tab-btn highlighted">내 댓글</div></a>
-                                            
+                                            <a href="write-list.html"><div class="tab-btn">내 글</div></a>
+                                            <a href=""><div class="tab-btn highlighted">내 댓글</div></a>      
                                         </div>
                                         <div class="my-page-main-head flex">
                                             <div class="my-write">
@@ -131,36 +130,56 @@
                                                 </form>
                                             </div>
                                         </div>
-                                        <table class="mypage-table">
+                                        <table id="write" class="mypage-table">
                                             <h1 class="hidden">테이블</h1>
                                             <tbody class="table-content">
                                                 <tr>
-                                                    <td>[할인]</td>
+                                                    <td class="table-tag">[자유]</td>
                                                     <td class="table-title">
-                                                        <a href="">회원님이 찜하신 브랜드 새로운 이벤트가 등록됐습니다.</a>
+                                                        <a href="">
+                                                            <div><span class="origin-write">회원님이 찜하신 브랜드 새로운 이벤트가 등록됐습니다.</span></div>
+                                                            <div>ㄴre:<span class="comment">그래서 그 이벤트는뭔데</span></div>
+                                                        </a>
                                                     </td>
-                                                    <td>2018.12.09 17:38</td>
+                                                    <td class="table-time">2018.12.09 17:38</td>
+                                                    <td class="table-view"><img src="/WebContent/image/icon/eye-16.png"><span>201</span></td>
+                                                    <td class="table-like"><img src="/WebContent/image/icon/like-16.png"><span>3</span></td>
                                                 </tr>
                                                 <tr>
-                                                    <td>[할인]</td>
+                                                    <td class="table-tag">[할인]</td>
                                                     <td class="table-title">
-                                                        <a href="">회원님이 찜하신 브랜드 중 마감임박 행사가 있어요!</a>
+                                                        <a href="">
+                                                            <div><span class="origin-write">회원님이 찜하신 브랜드 새로운 이벤트가 등록됐습니다.</span></div>
+                                                            <div>ㄴre:<span class="comment">그래서 그 이벤트는뭔데</span></div>
+                                                        </a>
                                                     </td>
-                                                    <td>2018.12.09 17:38</td>
+                                                    <td class="table-time">2018.12.09 17:38</td>
+                                                    <td class="table-view"><img src="/WebContent/image/icon/eye-16.png"><span>201</span></td>
+                                                    <td class="table-like"><img src="/WebContent/image/icon/like-16.png"><span>3</span></td>
                                                 </tr>
                                                 <tr>
-                                                    <td>[혹혹]</td>
+                                                    <td class="table-tag">[후기]</td>
                                                     <td class="table-title">
-                                                        <a href="">당신의 게시글이 추천받았습니다.</a>
+                                                        <a href="">
+                                                            <div><span class="origin-write">회원님이 찜하신 브랜드 새로운 이벤트가 등록됐습니다.</span></div>
+                                                            <div>ㄴre:<span class="comment">그래서 그 이벤트는뭔데</span></div>
+                                                        </a>
                                                     </td>
-                                                    <td>2018.12.09 17:38</td>
+                                                    <td class="table-time">2018.12.09 17:38</td>
+                                                    <td class="table-view"><img src="/WebContent/image/icon/eye-16.png"><span>201</span></td>
+                                                    <td class="table-like"><img src="/WebContent/image/icon/like-16.png"><span>3</span></td>
                                                 </tr>
                                                 <tr>
-                                                    <td>[혹혹]</td>
+                                                    <td class="table-tag">[자유]</td>
                                                     <td class="table-title">
-                                                        <a href="">당신의 댓글이 추천받았습니다.</a>
+                                                        <a href="">
+                                                            <div><span class="origin-write">회원님이 찜하신 브랜드 새로운 이벤트가 등록됐습니다.</span></div>
+                                                            <div>ㄴre:<span class="comment">그래서 그 이벤트는뭔데</span></div>
+                                                        </a>
                                                     </td>
-                                                    <td>2018.12.09 17:38</td>
+                                                    <td class="table-time">2018.12.09 17:38</td>
+                                                    <td class="table-view"><img src="/WebContent/image/icon/eye-16.png"><span>201</span></td>
+                                                    <td class="table-like"><img src="/WebContent/image/icon/like-16.png"><span>3</span></td>
                                                 </tr>
                                             </tbody>
                                         </table>

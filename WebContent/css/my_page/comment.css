@@ -131,6 +131,9 @@ aside .boxing-title{
 .my-page-main-box tr td:nth-child(1){
     width: 40px;
 }
+/* #write .table-tag{
+    width: 40px;
+} */
 /* 제목 */
 .my-page-main-box tr td:nth-child(2){
     text-align: left;
