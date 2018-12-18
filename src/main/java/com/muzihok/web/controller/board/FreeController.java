@@ -17,10 +17,8 @@ public class FreeController extends HttpServlet{
 	@Override
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		// TODO Auto-generated method stub
-		
-		System.out.println("�ȳ羲");
-		
-		
+
+			
 		RequestDispatcher dispatcher = request.getRequestDispatcher("/WEB-INF/views/board/free/list.jsp");
 		dispatcher.forward(request, response);
 	}
