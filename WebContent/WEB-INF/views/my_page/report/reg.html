@@ -4,8 +4,8 @@
     <html>
         <head>
             <meta charset="UTF-8" name="viewport" content="width=device-width, initial-scale=1">
-            <link rel="stylesheet" type="text/css" media="screen" href="/WebContent/css/my_page/main.css"/>
-            <title>내가쓴 글 목록</title>
+            <link rel="stylesheet" type="text/css" media="screen" href="/WebContent/css/my_page/report.css"/>
+            <title>문의하기</title>
         </head>
         <body>
             <header>
@@ -82,7 +82,7 @@
                                             <a href="../news/all-list.html"><li class="">My News <span>(0)</span></li></a>
                                             <a href="../board/write-list.html"><li class="">My Board</li></a>
                                             <a href="../wish/list.html"><li class="">My Wish</li></a>
-                                            <a href="../report/list.html"><li class="now">My Q&A</li></a>
+                                            <a href="list.html"><li class="now">My Q&A</li></a>
                                             <a href=""><li class="">My Info</li></a>
                                         </ul>
                                     </div>
@@ -106,64 +106,79 @@
                                             </ul>
                                         </div>
                                         
-                                        <!-- 테이블로하자  -->
-                                        <div class=my-page-main-box>
-                                            <div class="text-left margin-l-20" style="height: 100px;line-height: 100px;">
-                                                 1:1 문의 내역 <hr/>
-                                            </div>
-                                            
-                                            <table id="write" class="mypage-table">
-                                                <h1 class="hidden">테이블</h1>
-                                                <thead>
-                                                    <tr>
-                                                        <td>유형</td>
-                                                        <td class="text-center">문의내용</td>
-                                                        <td>등록일</td>
-                                                        <td>진행상태</td>
-                                                    </tr>
-                                                </thead>
-                                                <tbody class="table-content">
-                                                    <tr>
-                                                        <td class="table-tag">[건의]</td>
-                                                        <td class="table-title">
-                                                            <a href="detail.html"><span>혹무지가 불건전한 글을 올리고있습니다. </span></a>
-                                                        </td>
-                                                        <td class="table-time">2018.12.09 17:38</td>
-                                                        <td class="table-state"><span>처리완료</span></td>
-                                                    </tr>
-                                                    <tr>
-                                                        <td class="table-tag">[문의]</td>
-                                                        <td class="table-title">
-                                                            <a href="detail.html"><span>혹무지가 불건전한 글을 올리고있습니다. </span></a>
-                                                        </td>
-                                                        <td class="table-time">2018.12.09 17:38</td>
-                                                        <td class="table-state"><span>처리완료</span></td>
-                                                    </tr>
-                                                    <tr>
-                                                        <td class="table-tag">[신고]</td>
-                                                        <td class="table-title">
-                                                            <a href="detail.html"><span>혹무지가 불건전한 글을 올리고있습니다. </span></a>
-                                                        </td>
-                                                        <td class="table-time">2018.12.09 17:38</td>
-                                                        <td class="table-state"><span>처리완료</span></td>
-                                                    </tr>
-                                                </tbody>
-                                            </table>
-                                            <div class="pager">
-                                                <div class="block-wrapping"><input type="button" value=" " class="btn prev-btn"/></div>
-                                                <div class="block-wrapping">
-                                                    <ul class="list">
-                                                        <li><a href="">1</a></li>
-                                                        <li><a href="">2</a></li>
-                                                        <li><a href="">3</a></li>
-                                                    </ul>
-                                                </div>
-                                                <div class="block-wrapping"><input type="button" value=" " class="btn next-btn"/></div>
-                                            </div>
-
-                                            <div><a href="reg.html"><span style="padding:5px;border:1px black solid;">문의하기</span></a></div>
+                                        <div class="text-left" style="height: 70px;line-height: 70px;">
+                                            <span style="width:100px; padding:15px 40px; background:pink; margin-right: 20px;">문의하기<span>
                                         </div>
-    
+                                        <!-- 테이블로하자  -->
+                                        <style>
+                                            .report-radio span{
+                                                margin:0px 40px;
+                                            }
+                                            .report-radio label{
+                                                margin-right:20px;
+                                            }
+                                        </style>
+                                                <!-- 게시판 -->
+                                        <div class="my-page-main-box margin-b-20" >
+                                            <form>
+                                                <table id="write" class="mypage-table">
+                                                    <h1 class="hidden">테이블</h1>
+                                                    <tbody class="table-content">
+                                                        <tr style="height:50px;">
+                                                            <td style="width:100px;">
+                                                                <div>문의유형</div>
+                                                            </td>                                                        
+                                                            <td class="text-left">
+                                                                <div class="report-radio" style="">
+                                                                    <span>
+                                                                        <label>문의</label><input type="radio" name="kind">
+                                                                    </span>
+                                                                    <span>
+                                                                        <label>건의</label><input type="radio" name="kind">
+                                                                    </span>
+                                                                    <span>
+                                                                        <label>신고</label><input type="radio" name="kind">
+                                                                    </span>
+                                                                    <span>
+                                                                        <label>기타</label><input type="radio" name="kind">
+                                                                    </span>
+                                                                </div>
+                                                            </td>
+                                                        </tr>
+                                                        <tr style="height:30px;">
+                                                            <td style="height:50px;">
+                                                                <label style="height:50px;">제목</label>
+                                                            </td>
+                                                            
+                                                            <td style="width:800px;">
+                                                                <input type="text" name="kind" style="outline:none; width:100%;height:30px;">
+                                                            </td>
+                                                        </tr>
+                                                        <tr style="height:300px;">
+                                                            <td class="">
+                                                                <label style="height:300px;line-height: inherit;">내용</label>
+                                                            </td>
+                                                            <td class="">
+                                                                <textarea  style="padding:5px; border:0px; outline:none; width:792px; height:300px;line-height: inherit;"></textarea>
+                                                            </td>
+                                                        </tr>
+                                                        <tr style="height:150px;">
+                                                            <td class="">
+                                                                <label>파일첨부</label>    
+                                                            </td>
+                                                            <td class="">
+                                                                <div style="height:150px; width:100%;background:white;">
+                                                            </td>
+                                                        </tr>
+                                                    </tbody>
+                                                </table>
+                                                <div style="margin:20px; text-align: center;">
+                                                    <a href="list.html"><span style="padding:5px;border:1px black solid; ">문의하기</span></a>
+                                                    <a href="list.html"><span style="padding:5px;border:1px black solid; ">돌아가기</span></a>
+                                                </div>
+                                            </form>
+                                        </div>
+                                             <!-- 게시판 --> <!-- 게시판 --> <!-- 게시판 -->
                                     </div>
                                 </div>
                             </section>
