@@ -28,3 +28,12 @@
           modal.style.display = "none";
       }
   }
+  function inputIdChk(){
+    document.userInfo.idDuplication.value ="idUncheck";
+}
+
+  function goFirstForm() {
+      location.href="/hokmap/list";
+  }    
+
+

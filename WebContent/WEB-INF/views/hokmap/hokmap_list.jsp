@@ -18,6 +18,7 @@
     <link href="/css/hokmap/bootstrap.min.css" rel="stylesheet">
     <!-- Custom styles for this template -->
     <link href="/css/hokmap/1-col-portfolio.css" rel="stylesheet">
+    <link rel="icon" type="image/png" href="http://example.com/myicon.png">
 
 </head>
 
@@ -58,9 +59,7 @@
                         </div>
                     </div>
                     <!-- /.row -->
-
                     <hr>
-
                     <!-- Project Two -->
                     <div class="row">
                         <div class="col-md-7">

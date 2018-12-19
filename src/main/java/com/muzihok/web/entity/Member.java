@@ -1,24 +1,36 @@
 package com.muzihok.web.entity;
 
+import java.util.Date;
+
 public class Member {
 	private String id;
 	private String pwd;
 	private String name;
-	private String nicname;
+	private String phone;
 	private String email;
-	private String birth;
+	private Date birth;
+	private String nickname;
 	
 	public Member() {
 		// TODO Auto-generated constructor stub
 	}
 
-	public Member(String id, String pwd, String name, String nicname, String email, String birth) {
+	public Member(String id, String pwd, String name, String phone, String email, Date birth, String nickname) {
 		this.id = id;
 		this.pwd = pwd;
 		this.name = name;
-		this.nicname = nicname;
+		this.phone = phone;
 		this.email = email;
 		this.birth = birth;
+		this.nickname = nickname;
+	}
+
+	public Member(String pwd, String phone, String email, String nickname) {
+	
+		this.pwd = pwd;
+		this.phone = phone;
+		this.email = email;
+		this.nickname = nickname;
 	}
 
 	public String getId() {
@@ -45,12 +57,12 @@ public class Member {
 		this.name = name;
 	}
 
-	public String getNicname() {
-		return nicname;
+	public String getPhone() {
+		return phone;
 	}
 
-	public void setNicname(String nicname) {
-		this.nicname = nicname;
+	public void setPhone(String phone) {
+		this.phone = phone;
 	}
 
 	public String getEmail() {
@@ -61,20 +73,27 @@ public class Member {
 		this.email = email;
 	}
 
-	public String getBirth() {
+	public Date getBirth() {
 		return birth;
 	}
 
-	public void setBirth(String birth) {
+	public void setBirth(Date birth) {
 		this.birth = birth;
+	}
+
+	public String getnickname() {
+		return nickname;
+	}
+
+	public void setnickname(String nickname) {
+		this.nickname = nickname;
 	}
 
 	@Override
 	public String toString() {
-		return "Member [id=" + id + ", pwd=" + pwd + ", name=" + name + ", nicname=" + nicname + ", email=" + email
-				+ ", birth=" + birth + "]";
+		return "Member [id=" + id + ", pwd=" + pwd + ", name=" + name + ", phone=" + phone + ", email=" + email
+				+ ", birth=" + birth + ", nickname=" + nickname + "]";
 	}
 	
-	
-	
 }
+	

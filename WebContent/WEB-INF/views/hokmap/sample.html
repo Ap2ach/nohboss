@@ -1,133 +1,229 @@
 <!DOCTYPE html>
-<html lang="en">
-
+<html>
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta http-equiv="X-UA-Compatible" content="ie=edge">
-  <title>Document</title>
-  <link rel="stylesheet" type="text/css" media="screen" href="/WebContent/css/member/join.css" />
-    <link href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.0/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
-    <script src="//maxcdn.bootstrapcdn.com/bootstrap/3.3.0/js/bootstrap.min.js"></script>
-    <script src="//code.jquery.com/jquery-1.11.1.min.js"></script>
+    <title>회원가입 화면</title>
+ 
+    <style type="text/css">
+        table{
+            margin-left:auto; 
+            margin-right:auto;
+            border:3px solid skyblue;
+        }
+        
+        td{
+            border:1px solid skyblue
+        }
+        
+        #title{
+            background-color:skyblue
+        }
+   </style>
+ 
+    <script type="text/javascript">
     
-  <style>
-    /* The Modal (background) */
-
-
-    /* Modal Content/Box */
-    .modal-content {
-      background-color: #fefefe;
-      margin: 15% auto;
-      /* 15% from the top and centered */
-      padding: 20px;
-      border: 1px solid #888;
-      width: 50%;
-      /* Could be more or less, depending on screen size */
-    }
-
-    /* The Close Button */
-    .close {
-      color: #aaa;
-      float: right;
-      font-size: 28px;
-      font-weight: bold;
-    }
-
-    .close:hover,
-    .close:focus {
-      color: black;
-      text-decoration: none;
-      cursor: pointer;
-    }
-  </style>
+        // 회원가입 화면의 입력값들을 검사한다.
+        function checkValue()
+        {
+            var form = document.userInfo;
+        
+            if(!form.id.value){
+                alert("아이디를 입력하세요.");
+                return false;
+            }
+            
+            if(form.idDuplication.value != "idCheck"){
+                alert("아이디 중복체크를 해주세요.");
+                return false;
+            }
+            
+            if(!form.password.value){
+                alert("비밀번호를 입력하세요.");
+                return false;
+            }
+            
+            // 비밀번호와 비밀번호 확인에 입력된 값이 동일한지 확인
+            if(form.password.value != form.passwordcheck.value ){
+                alert("비밀번호를 동일하게 입력하세요.");
+                return false;
+            }    
+            
+            if(!form.name.value){
+                alert("이름을 입력하세요.");
+                return false;
+            }
+            
+            if(!form.birthyy.value){
+                alert("년도를 입력하세요.");
+                return false;
+            }
+            
+            if(isNaN(form.birthyy.value)){
+                alert("년도는 숫자만 입력가능합니다.");
+                return false;
+            }
+            
+            if(form.birthmm.value == "00"){
+                alert("월을 선택하세요.");
+                return false;
+            }
+            
+            if(!form.birthdd.value){
+                alert("날짜를 입력하세요.");
+                return false;
+            }
+            
+            if(isNaN(form.birthdd.value)){
+                alert("날짜는 숫자만 입력가능합니다.");
+                return false;
+            }
+            
+            if(!form.mail1.value){
+                alert("메일 주소를 입력하세요.");
+                return false;
+            }
+            
+            if(!form.phone.value){
+                alert("전화번호를 입력하세요.");
+                return false;
+            }
+            
+            if(isNaN(form.phone.value)){
+                alert("전화번호는 - 제외한 숫자만 입력해주세요.");
+                return false;
+            }
+            
+            if(!form.address.value){
+                alert("주소를 입력하세요.");
+                return false;
+            }
+        }
+        
+        // 취소 버튼 클릭시 첫화면으로 이동
+        function goFirstForm() {
+            location.href="MainForm.do";
+        }    
+        
+        // 아이디 중복체크 화면open
+        function openIdChk(){
+        
+            window.name = "parentForm";
+            window.open("member/IdCheckForm.jsp",
+                    "chkForm", "width=500, height=300, resizable = no, scrollbars = no");    
+        }
+ 
+        // 아이디 입력창에 값 입력시 hidden에 idUncheck를 세팅한다.
+        // 이렇게 하는 이유는 중복체크 후 다시 아이디 창이 새로운 아이디를 입력했을 때
+        // 다시 중복체크를 하도록 한다.
+        function inputIdChk(){
+            document.userInfo.idDuplication.value ="idUncheck";
+        }
+        
+   </script>
+    
 </head>
-<script>
-</script>
-
 <body>
-  <!-- Trigger/Open The Modal -->
-  <button id="login-btn">Open Modal</button>
-
-  <!-- The Modal -->
-  <div id="myModal" class="modal">
-    <div class="container">
-    	<div class="row">
-			<div class="col-md-6 col-md-offset-3">
-				<div class="panel panel-login">
-					<div class="panel-heading">
-						<div class="row">
-							<div class="col-xs-6">
-								<a href="#" class="active" id="login-form-link">로그인</a>
-							</div>
-							<div class="col-xs-6">
-								<a href="#" id="register-form-link">회원가입</a>
-							</div>
-						</div>
-						<hr>
-					</div>
-					<div class="panel-body">
-						<div class="row">
-							<div class="col-lg-12">
-								<form id="login-form" action="https://phpoll.com/login/process" method="post" role="form" style="display: block;">
-									<div class="form-group">
-										<input type="text" name="username" id="username" tabindex="1" class="form-control" placeholder="Username" value="">
-									</div>
-									<div class="form-group">
-										<input type="password" name="password" id="password" tabindex="2" class="form-control" placeholder="Password">
-									</div>
-									<div class="form-group text-center">
-										<input type="checkbox" tabindex="3" class="" name="remember" id="remember">
-										<label for="remember"> 정보 저장</label>
-									</div>
-									<div class="form-group">
-										<div class="row">
-											<div class="col-sm-6 col-sm-offset-3">
-												<input type="submit" name="login-submit" id="login-submit" tabindex="4" class="form-control btn btn-login" value="Log In">
-											</div>
-										</div>
-									</div>
-									<div class="form-group">
-										<div class="row">
-											<div class="col-lg-12">
-												<div class="text-center">
-													<a href="https://phpoll.com/recover" tabindex="5" class="forgot-password">비밀번호 찾기</a>
-												</div>
-											</div>
-										</div>
-									</div>
-								</form>
-								<form id="register-form" action="https://phpoll.com/register/process" method="post" role="form" style="display: none;">
-									<div class="form-group">
-										<input type="text" name="username" id="username" tabindex="1" class="form-control" placeholder="Username" value="">
-									</div>
-									<div class="form-group">
-										<input type="email" name="email" id="email" tabindex="1" class="form-control" placeholder="Email Address" value="">
-									</div>
-									<div class="form-group">
-										<input type="password" name="password" id="pwd" tabindex="2" class="form-control" placeholder="Password">
-									</div>
-									<div class="form-group">
-										<input type="password" name="confirm-password" id="confirm-pwd" tabindex="2" class="form-control" placeholder="Confirm Password">
-									</div>
-									<div class="form-group">
-										<div class="row">
-											<div class="col-sm-6 col-sm-offset-3">
-												<input type="submit" name="register-submit" id="register-submit" tabindex="4" class="form-control btn btn-register" value="Register Now">
-											</div>
-										</div>
-									</div>
-								</form>
-							</div>
-						</div>
-					</div>
-				</div>
-			</div>
-		</div>
-    </div>
-  </div>
-  <script src="modal.js"></script>
-  <script src="../member/join.js"></script>
+        <br><br>
+        <b><font size="6" color="gray">회원가입</font></b>
+        <br><br><br>
+        
+        
+        <!-- 입력한 값을 전송하기 위해 form 태그를 사용한다 -->
+        <!-- 값(파라미터) 전송은 POST 방식, 전송할 페이지는 JoinPro.jsp -->
+        <form method="post" action="MemberJoinAction.do" 
+                name="userInfo" onsubmit="return checkValue()">
+            <table>
+                <tr>
+                    <td id="title">아이디</td>
+                    <td>
+                        <input type="text" name="id" maxlength="50" onkeydown="inputIdChk()">
+                        <input type="button" value="중복확인" onclick="openIdChk()">    
+                        <input type="hidden" name="idDuplication" value="idUncheck" >
+                    </td>
+                </tr>
+                        
+                <tr>
+                    <td id="title">비밀번호</td>
+                    <td>
+                        <input type="password" name="password" maxlength="50">
+                    </td>
+                </tr>
+                
+                <tr>
+                    <td id="title">비밀번호 확인</td>
+                    <td>
+                        <input type="password" name="passwordcheck" maxlength="50">
+                    </td>
+                </tr>
+                    
+                <tr>
+                    <td id="title">이름</td>
+                    <td>
+                        <input type="text" name="name" maxlength="50">
+                    </td>
+                </tr>
+                    
+                <tr>
+                    <td id="title">성별</td>
+                    <td>
+                        <input type="radio" name="gender" value="남" checked>남
+                        <input type="radio" name="gender" value="여" >여
+                    </td>
+                </tr>
+                    
+                <tr>
+                    <td id="title">생일</td>
+                    <td>
+                        <input type="text" name="birthyy" maxlength="4" placeholder="년(4자)" size="6">
+                        <select name="birthmm">
+                            <option value="00">월</option>
+                            <option value="01" >1</option>
+                            <option value="02" >2</option>
+                            <option value="03" >3</option>
+                            <option value="04" >4</option>
+                            <option value="05" >5</option>
+                            <option value="06" >6</option>
+                            <option value="07" >7</option>
+                            <option value="08" >8</option>
+                            <option value="09" >9</option>
+                            <option value="10" >10</option>
+                            <option value="11" >11</option>
+                            <option value="12" >12</option>
+                        </select>
+                        <input type="text" name="birthdd" maxlength="2" placeholder="일" size="4">
+                    </td>
+                </tr>
+                    
+                <tr>
+                    <td id="title">이메일</td>
+                    <td>
+                        <input type="text" name="mail1" maxlength="50">@
+                        <select name="mail2">
+                            <option>naver.com</option>
+                            <option>daum.net</option>
+                            <option>gmail.com</option>
+                            <option>nate.com</option>                        
+                        </select>
+                    </td>
+                </tr>
+                    
+                <tr>
+                    <td id="title">휴대전화</td>
+                    <td>
+                        <input type="text" name="phone"/>
+                    </td>
+                </tr>
+                <tr>
+                    <td id="title">주소</td>
+                    <td>
+                        <input type="text" size="50" name="address"/>
+                    </td>
+                </tr>
+            </table>
+            <br>
+            <input type="submit" value="가입"/>  
+            <input type="button" value="취소" onclick="goFirstForm()">
+        </form>
+ 
 </body>
-
 </html>
+

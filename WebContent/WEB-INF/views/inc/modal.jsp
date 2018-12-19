@@ -1,5 +1,5 @@
 <%@ page language="java" contentType="text/html; charset=EUC-KR"
-	pageEncoding="EUC-KR"%>
+	pageEncoding="UTF-8"%>
 <div id="myModal" class="modal">
 	<!-- Modal content -->
 	<div class="join-container">
@@ -10,10 +10,10 @@
 					<div class="panel-heading">
 						<div class="row">
 							<div class="col-xs-6">
-								<a href="#" class="active" id="login-form-link">∑Œ±◊¿Œ</a>
+								<a href="#" class="active" id="login-form-link">Î°úÍ∑∏Ïù∏</a>
 							</div>
 							<div class="col-xs-6">
-								<a href="#" id="register-form-link">»∏ø¯∞°¿‘</a>
+								<a href="#" id="register-form-link">ÌöåÏõêÍ∞ÄÏûÖ</a>
 							</div>
 						</div>
 						<hr>
@@ -21,26 +21,21 @@
 					<div class="panel-body">
 						<div class="row">
 							<div class="col-lg-12">
-								<form id="login-form" action="list"
-									method="post" role="form" style="display: block;">
+								<form id="login-form" action="list" method="post" role="form" style="display: block;">
 									<div class="form-group">
-										<input type="text" name="username" id="uid" tabindex="1"
-											class="form-control" placeholder="æ∆¿Ãµ" value="">
+										<input type="text" name="username" id="uid" tabindex="1" class="form-control" placeholder="ÏïÑÏù¥Îîî" value="">
 									</div>
 									<div class="form-group">
-										<input type="password" name="password" id="pwd" tabindex="2"
-											class="form-control" placeholder="∫Òπ–π¯»£">
+										<input type="password" name="password" id="pwd" tabindex="2" class="form-control" placeholder="ÎπÑÎ∞ÄÎ≤àÌò∏">
 									</div>
 									<div class="form-group text-center">
-										<input type="checkbox" tabindex="3" class="" name="remember"
-											id="remember"> <label for="remember"> ¡§∫∏ ¿˙¿Â</label>
+										<input type="checkbox" tabindex="3" class="" name="remember" id="remember"> <label for="remember"> Ï†ïÎ≥¥ Ï†ÄÏû•</label>
 									</div>
 									<div class="form-group">
 										<div class="row">
 											<div class="col-sm-6 col-sm-offset-3">
-												<input type="submit" name="login-submit" id="login-submit"
-													tabindex="4" class="form-control btn btn-login"
-													value="Log In">
+												<input type="submit" name="login-submit" id="login-submit" tabindex="4" class="form-control btn btn-login"
+												 value="Log In">
 											</div>
 										</div>
 									</div>
@@ -48,56 +43,49 @@
 										<div class="row">
 											<div class="col-lg-12">
 												<div class="text-center">
-													<a href="https://phpoll.com/recover" tabindex="5"
-														class="forgot-password">∫Òπ–π¯»£ √£±‚</a>
+													<a href="https://phpoll.com/recover" tabindex="5" class="forgot-password">ÎπÑÎ∞ÄÎ≤àÌò∏ Ï∞æÍ∏∞</a>
 												</div>
 											</div>
 										</div>
 									</div>
 								</form>
-								<form id="register-form"
-									action="list" method="post"
-									role="form" style="display: none;">
-									<div class="form-group">
-										<input type="text" name="reg-uid" id="userid" tabindex="1"
-											class="form-control" placeholder="æ∆¿Ãµ" value="">
+								<form id="register-form" action="list" name="userInfo" method="post" role="form" style="display: none;" onsubmit="return duplechk()">
+									<div class="form-group dupleId">
+										<input type="text" name="reg-uid" id="id" tabindex="1" class="form-control" placeholder="ÏïÑÏù¥Îîî" value="" onkeydown="inputIdChk()">
+										<input type="button" name="dupl-check" id="duplchk" value="Ï§ëÎ≥µÌôïÏù∏" class="form-control btn btn-register" onclick="openIdChk()" />
+										<input type="hidden" name="idDuplication" value="idUncheck" >
 									</div>
 									<div class="form-group">
-										<input type="text" name="name" id="name" tabindex="2"
-											class="form-control" placeholder="¿Ã∏ß">
+										<input type="text" name="name" id="name" tabindex="2" class="form-control" placeholder="Ïù¥Î¶Ñ">
 									</div>
 									<div class="form-group">
-										<input type="text" name="nicname" id="nicname" tabindex="2"
-											class="form-control" placeholder="¥–≥◊¿”">
+										<input type="text" name="nicname" id="nicname" tabindex="3" class="form-control" placeholder="ÎãâÎÑ§ÏûÑ">
 									</div>
 
 									<div class="form-group">
-										<input type="password" name="reg-pwd" id="reg-pwd"
-											tabindex="2" class="form-control" placeholder="∫Òπ–π¯»£" value="">
+										<input type="password" name="reg-pwd" id="reg-pwd" tabindex="4" class="form-control" placeholder="ÎπÑÎ∞ÄÎ≤àÌò∏" value="">
 									</div>
 									<div class="form-group">
-										<input type="password" name="confirm-pwd" id="confirm-pwd"
-											tabindex="2" class="form-control" placeholder="∫Òπ–π¯»£ »Æ¿Œ"
-											value="">
-									</div>
-										<div class="form-group">
-										<input type="text" name="phone" id="phne" tabindex="1"
-											class="form-control" placeholder="«⁄µÂ∆˘" value="">
+										<input type="password" name="confirm-pwd" id="confirm-pwd" tabindex="5" class="form-control" placeholder="ÎπÑÎ∞ÄÎ≤àÌò∏ ÌôïÏù∏"
+										 value="">
 									</div>
 									<div class="form-group">
-										<input type="email" name="email" id="email" tabindex="1"
-											class="form-control" placeholder="¿Ã∏ﬁ¿œ" value="">
+										<input type="text" name="phone" id="phone" tabindex="6" class="form-control" minlength="12" maxlength="13"
+										 placeholder="Ìï∏ÎìúÌè∞" value="" pattern="^01(?:0|1|[6-9])-(?:\d{3}|\d{4})-\d{4}$">
 									</div>
 									<div class="form-group">
-										<input type="date" name="birth" id="birth" tabindex="2"
-											class="form-control" min='1899-01-01' max='2018-12-31'>
+										<input type="email" name="email" id="email" tabindex="7" class="form-control" placeholder="Ïù¥Î©îÏùº" value="">
+									</div>
+									<div class="form-group">
+										<input type="date" name="birth" id="birth" tabindex="8" class="form-control" min='1899-01-01' max='2018-12-31'>
 									</div>
 									<div class="form-group">
 										<div class="row">
 											<div class="col-sm-6 col-sm-offset-3">
-												<input type="submit" name="register-submit"
-													id="register-submit" tabindex="4"
-													class="form-control btn btn-register" value="Register Now">
+												<input type="submit" name="register-submit" id="register-submit" tabindex="9" class="form-control btn btn-register"
+												 value="Register Now">
+												<input type="button" id="register-cancle" tabindex="10" class="form-control btn btn-register cancle"
+												 value="CANCLE" onclick="goFirstForm()" />
 											</div>
 										</div>
 									</div>
