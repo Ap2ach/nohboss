@@ -3,7 +3,7 @@
 <header>
 	<div class="content-container flex">
 		<div class="header-logo-container">
-			<a href=""><img src="../image/logo.png" width=166px height=70px></a>
+			<a href=""><img src="/image/logo.png" width=166px height=70px></a>
 		</div>
 		<div class="header-main-container">
 			<nav class="menu-lists">

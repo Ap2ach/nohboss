@@ -1,0 +1,278 @@
+/* 공동 템플릿 세팅 +헤더*/
+@import url("/css/inc/common.css");
+/* ------------------------검색창---------------------------------- */
+@import url("/css/inc/searchform.css");
+/* ---------------------어사이드--------------------------------------- */
+@import url("/css/inc/asidelist.css");
+/* ---------------------페이저--------------------------------------- */
+@import url("/css/inc/pager.css");
+aside .boxing{
+    margin:30px 0px;
+    width:inherit;
+    height:160px;
+    background-color:#a3a3a3;
+    color:black;
+    font-weight: bold;
+    font-size:15px;
+    border-radius: 5px;
+}
+aside .boxing-title{
+    text-align: center !important;
+    height:50px;
+    line-height:50px;
+    background-color:#343a40;
+    color:rgb(255, 255, 255);
+    font-weight: bold;
+    font-size:27px;
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px;
+}
+
+/* -------------------------------------메인 새 소식 창 ----------------------------- */
+
+#main-body .my-page-main-head{
+    width:inherit;
+    height:100px;
+}
+.my-page-main-head .news-alarm{
+    flex-grow:8;
+    line-height: 60px;
+    height:60px;
+    margin:inherit;
+    background-color:rgb(95, 86, 95); 
+    color:#a3a3a3;
+}
+
+.my-page-main-head .total-btn{
+    
+    flex-grow: 1;
+    line-height: 40px;
+    height:40px;
+    margin:inherit;
+    
+}
+
+
+#main-body .my-page-main-head{
+    line-height:100px;
+    background-color:#343a40; 
+    color:rgb(255, 255, 255); 
+    font-weight: bold;
+    font-size:27px;
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px;
+}
+#main-body .my-page-main-box{
+    min-height:850px;
+    width:100%;
+    text-align: center;
+    background-color:#a3a3a3;
+    font-weight: bold;
+    border-bottom-right-radius:5px;
+    border-bottom-left-radius: 5px;
+    /* font-size:13px; */
+}
+
+#main-body .my-page-main-box .tab-btn{
+    width:100px;
+    height:40px;
+    line-height: 40px;
+    background:#343a40;
+    font-weight: bold;
+    min-width:70px;
+    margin-top:10px;
+    margin-left:10px;
+    padding:1px;
+    border-radius:5px;
+    box-sizing: border-box;
+}
+
+/* -------------------------------------전체 소식 필터  ----------------------------- */
+
+#main-body .news-filter select{
+    width:80px;
+    height:30px;
+}
+
+
+/* -------------------------------------내가 쓴 글 & 댓글 my_write   ----------------------------- */
+
+#main-body .my-write select{
+    width:100px;
+    height:30px;
+    border:0px;
+    border-radius: 5px;
+    position: relative;
+    margin-left:10px;
+
+}
+#main-body .my-write-text{
+    width:300px;
+    height:30px;
+    outline:none;
+    margin-left:20px;
+    border-radius: 5px;
+}
+#main-body .filter-btn{
+    background:url(/image/icon/zoom-in-32.png) no-repeat;
+    width:32px;
+    height:32px;
+    margin-left:10px;
+}
+
+/* -------------------------------------테이블 ----------------------------- */
+.mypage-table{
+    margin-left:auto;
+    margin-right:auto;
+    width:inherit;
+    table-layout: fixed;
+    font-size:13px;
+    background-color:#a3a3a3;
+    font-weight: bold;
+    border-collapse: collapse;
+}
+.mypage-table td{
+    padding: 25px 10px;
+}
+.mypage-table tbody td:first-child{
+    background:#343a40;
+    color:white;
+    font-size:17px;
+    border-radius: 5000px;
+}
+
+.mypage-table thead td.table-title{
+    text-align:center;    
+}
+.mypage-table .table-title{
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    text-align:left;
+}
+.mypage-table thead td{
+    font-size: 15px;
+}
+.mypage-table tbody td{
+    border-bottom:3px solid #a3a3a3;
+    border-top:3px solid #a3a3a3;
+}
+/* ---------------------새소식 ---------------------------------------------------- */
+.news-table{
+    width:70%;
+    background:#a3a3a3;
+}
+
+.news-table .table-id{
+    width:5%;
+}
+.news-table .table-tag{
+    width:5%;
+}
+.news-table .table-title{
+    width:30%;
+}
+.news-table .table-time{
+    width:10%;
+}
+/* ---------------------문의내역----------------------------------------------------- */
+.report-table{
+    width:70%;
+    background:#a3a3a3;
+}
+.report-table .table-id{
+    width:10%;
+}
+
+.report-table .table-tag{
+    width:10%;
+}
+.report-table .table-title{
+    width:40%;
+}
+.report-table .tabl-time{
+    width:15%;
+}
+.report-table .table-state{
+    width:15%;
+}
+.report-reg-table td{
+    color:black !important;
+    font-size: 20px !important;
+}
+/* ---------------------write----------------------------------------------------- */
+.write-table{
+    width:90%;
+    background:#a3a3a3;
+}
+.write-table .comment td{
+    padding:15px 0px !important;
+}
+.write-table .table-tag{
+    width:10%;
+}
+.write-table .table-id{
+    width:10%;
+}
+.write-table .table-title{
+    width:55%;
+}
+.write-table .table-comment{
+    width:5%;
+}
+.write-table .table-time{
+    width:20%;
+}
+
+.write-table .table-view{
+    width:10%;
+}
+.write-table .table-like{
+    width:10%;
+}
+
+/* --------------------위시리스트 ----------------------------------------------------- */
+
+#main-body .my-page-main-box .wish-count{
+    margin:20px;
+    font-size: 25px;
+}
+
+
+.brand-list{
+    width:970px;
+    height:600px;
+    background:#a3a3a3;
+    border-radius: 5px; 
+    flex-flow:wrap;
+    overflow: scroll;
+    margin-left: auto;
+    margin-right:auto;
+}
+
+.sel-brand{
+    box-sizing: border-box;
+    border:black 5px solid !important;
+    width:250px !important;
+    height:250px !important;
+    margin:30px; 
+}
+.unsel-brand{
+    box-sizing: border-box;
+    border:none !important;
+    width:250px !important;
+    height:250px !important;
+    margin:30px; 
+}
+/* 등록일 */
+ /* .my-page-main-box td:nth-child(3){
+    width: 100px;
+} */
+/* 조회 */
+/* .my-page-main-box tr td:nth-child(4){
+    width: 50px;
+} */
+/* 추천 */
+/* .my-page-main-box tr td:nth-child(5){
+    width: 50px;
+} */
