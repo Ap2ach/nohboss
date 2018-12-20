@@ -209,4 +209,6 @@ public class JdbcBoardService implements BoardService {
 		
 		return list;
 	}
+	
+
 }

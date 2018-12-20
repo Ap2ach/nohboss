@@ -4,6 +4,7 @@ import java.util.List;
 
 import com.muzihok.web.entity.Board;
 import com.muzihok.web.entity.BoardView;
+import com.muzihok.web.entity.Notice;
 
 public interface BoardService {
 
@@ -15,8 +16,6 @@ public interface BoardService {
 	
 	List<BoardView> getBoardViewList(String boardcategory, int page, int sort, String query, String field);
 	
-	
-	// ReviewView 테이블 조회	
 	
 	
 	
