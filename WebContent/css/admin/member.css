@@ -230,13 +230,12 @@ input[type="search"]{
     padding: 5px 15px;
     display: inline-block;
     margin-bottom: 10px;
-    cursor: pointer;
     transition: all .6s linear;
 }
 .infor:hover{
     color: #313cb2;
     background: white;
-    cursor: pointer;
+
 }
 .user-management{
     border-radius: 4px;
@@ -298,16 +297,15 @@ input[type="search"]{
 }
 /* ---table------------------- */
 .my-page-main-box{
-    min-height: 400px;
+    min-height: 500px;
     text-align: center;
     font-weight: bold;
     position: relative;
 }
 .my-page-main-head{
     height: 70px;
-    margin: 30px;
-    margin-top: 10px;
-    margin-left: 0;
+    margin: 0;
+    margin-bottom: 20px;
 }
 .my-write{
     padding: 0;
@@ -315,7 +313,7 @@ input[type="search"]{
     border: 0;
 }
 .my-write select{
-    width: 100px;
+    width: 95px;
     height: 30px;
     position: relative;
 }
@@ -323,7 +321,7 @@ input[type="search"]{
     box-sizing: border-box;
     margin: 0;
     padding: 0;
-    width: 400px;
+    width: 200px;
     height: 30px;
     outline: none;
     margin-top: -1px;
@@ -333,7 +331,6 @@ input[type="search"]{
     height: 30px;
     line-height: 30px;
     font-size: 20px;
-    display: flex;
 }
 .pager{
     text-align: center;
@@ -341,6 +338,7 @@ input[type="search"]{
     line-height: 100px;
     width: 100%;
     bottom: 0;
+    position: absolute;
 }
 .pager div{
     display: inline-block;
@@ -358,7 +356,7 @@ input[type="search"]{
     width: fit-content;
 }
 .mypage-table{
-
+    margin: auto;
     font-size: 25px;
     font-weight: bold;
 }
@@ -385,7 +383,6 @@ table{
     text-align: center;
    
 }
-
 table td{
     border: ridge 1px #4346bb;
     
@@ -399,5 +396,4 @@ table td{
 }
 .table-container{
     width: 100%;
-    column-count: 2;
 }

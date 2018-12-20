@@ -12,7 +12,7 @@ body{
     min-height: 400px;
 }
 
-h1, body, ul, li, a, form, input, p, dl{
+h1, body, ul, li, a, form, input, p, dl, dd, textarea{
     margin:0px;
     padding:0px;
     border: 0px;
@@ -28,13 +28,19 @@ li{
 }
 
 a{
-    text-decoration: none!important;
+    text-decoration: none;
     color:black;
 }
 
 
 a:hover{
     color:#f68500!important;
+}
+
+.sign{
+	font-weight: bold;
+    color:#f68500!important;
+    border-bottom: 2px solid #f68500!important;
 }
 
 .btn{
@@ -57,6 +63,11 @@ a:hover{
 }
 
 /*---------클래스 ----------------------------*/
+.strong{
+    color: #fd7e00;
+    font-weight: bold;
+}
+
 .hidden{
     display: none!important;
 }
@@ -166,7 +177,7 @@ a:hover{
 
 .aside-category li:hover{
     
-    border-bottom: 1px solid #f68500!important;
+    border-bottom: 1px solid #f68500;
 }
 
 .aside-category li a{

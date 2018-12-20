@@ -1,5 +1,11 @@
+<<<<<<< HEAD
 <%@ page language="java" contentType="text/html; charset=EUC-KR"
 	pageEncoding="UTF-8"%>
+=======
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+    pageEncoding="UTF-8"%>
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
+>>>>>>> refs/remotes/origin/master
 <div id="myModal" class="modal">
 	<!-- Modal content -->
 	<div class="join-container">
@@ -23,13 +29,28 @@
 							<div class="col-lg-12">
 								<form id="login-form" action="login" method="post" role="form" style="display: block;" >
 									<div class="form-group">
+<<<<<<< HEAD
 										<input type="text" name="username" id="uid" tabindex="1" class="form-control" placeholder="아이디" value="">
+=======
+										<input type="text" name="username" id="uid" tabindex="1"
+											class="form-control" placeholder="아이디" value="">
+>>>>>>> refs/remotes/origin/master
 									</div>
 									<div class="form-group">
+<<<<<<< HEAD
 										<input type="password" name="password" id="pwd" tabindex="2" class="form-control" placeholder="비밀번호">
+=======
+										<input type="password" name="password" id="pwd" tabindex="2"
+											class="form-control" placeholder="비밀번호">
+>>>>>>> refs/remotes/origin/master
 									</div>
 									<div class="form-group text-center">
+<<<<<<< HEAD
 										<input type="checkbox" tabindex="3" class="" name="remember" id="remember"> <label for="remember"> 정보 저장</label>
+=======
+										<input type="checkbox" tabindex="3" class="" name="remember"
+											id="remember"> <label for="remember"> 정보 저장</label>
+>>>>>>> refs/remotes/origin/master
 									</div>
 									<div class="form-group">
 										<div class="row">
@@ -43,36 +64,80 @@
 										<div class="row">
 											<div class="col-lg-12">
 												<div class="text-center">
+<<<<<<< HEAD
 													<a href="" tabindex="5" class="forgot-password">비밀번호 찾기</a>
+=======
+													<a href="https://phpoll.com/recover" tabindex="5"
+														class="forgot-password">비밀번호 찾기</a>
+>>>>>>> refs/remotes/origin/master
 												</div>
 											</div>
 										</div>
 									</div>
 								</form>
+<<<<<<< HEAD
 							
 									   <form id="register-form" method="post" action="list" name="userInfo" onsubmit="return checkValue()" class="hidden">
 									<div class="form-group dupleId">
 										<input type="text" name="reg-uid" id="id" tabindex="1" class="form-control" placeholder="아이디" value="" onkeydown="inputIdChk()">
 										<input type="button" name="dupl-check" id="duplchk" value="중복확인" class="form-control btn btn-register" onclick="openIdChk()" />
 										<input type="hidden" name="idDuplication" value="idUncheck" >
+=======
+								<form id="register-form"
+									action="list" method="post"
+									role="form" style="display: none;">
+									<div class="form-group">
+										<input type="text" name="reg-uid" id="userid" tabindex="1"
+											class="form-control" placeholder="아이디" value="">
+>>>>>>> refs/remotes/origin/master
 									</div>
 									<div class="form-group">
+<<<<<<< HEAD
 										<input type="text" name="name" id="name" tabindex="2" class="form-control" placeholder="이름">
+=======
+										<input type="text" name="name" id="name" tabindex="2"
+											class="form-control" placeholder="이름">
+>>>>>>> refs/remotes/origin/master
 									</div>
 									<div class="form-group">
+<<<<<<< HEAD
 										<input type="text" name="nicname" id="nicname" tabindex="3" class="form-control" placeholder="닉네임">
+=======
+										<input type="text" name="nicname" id="nicname" tabindex="2"
+											class="form-control" placeholder="닉네임">
+>>>>>>> refs/remotes/origin/master
 									</div>
 
 									<div class="form-group">
+<<<<<<< HEAD
 										<input type="password" name="reg-pwd" id="reg-pwd" tabindex="4" class="form-control" placeholder="비밀번호" value="">
+=======
+										<input type="password" name="reg-pwd" id="reg-pwd"
+											tabindex="2" class="form-control" placeholder="비밀번호" value="">
+>>>>>>> refs/remotes/origin/master
 									</div>
 									<div class="form-group">
+<<<<<<< HEAD
 										<input type="password" name="confirm-pwd" id="confirm-pwd" tabindex="5" class="form-control" placeholder="비밀번호 확인"
 										 value="">
+=======
+										<input type="password" name="confirm-pwd" id="confirm-pwd"
+											tabindex="2" class="form-control" placeholder="비밀번호 확인"
+											value="">
+									</div>
+										<div class="form-group">
+										<input type="text" name="phone" id="phne" tabindex="1"
+											class="form-control" placeholder="핸드폰" value="">
+>>>>>>> refs/remotes/origin/master
 									</div>
 									<div class="form-group">
+<<<<<<< HEAD
 										<input type="text" name="phone" id="phone" tabindex="6" class="form-control" minlength="12" maxlength="13"
 										 placeholder="핸드폰" value="" pattern="^01(?:0|1|[6-9])-(?:\d{3}|\d{4})-\d{4}$">
+=======
+										<input type="email" name="email" id="email" tabindex="1"
+											class="form-control" placeholder="이메일" value="">
+>>>>>>> refs/remotes/origin/master
 									</div>
 									<div class="form-group">
 										<input type="email" name="email" id="email" tabindex="7" class="form-control" placeholder="이메일" value="">

@@ -19,7 +19,7 @@ public class FreeDetailController extends HttpServlet{
 		// TODO Auto-generated method stub
 
 			
-		RequestDispatcher dispatcher = request.getRequestDispatcher("/WEB-INF/views/board/free/list.jsp");
+		RequestDispatcher dispatcher = request.getRequestDispatcher("/WEB-INF/views/board/free/detail.jsp");
 		dispatcher.forward(request, response);
 	}
 

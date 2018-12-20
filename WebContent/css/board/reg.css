@@ -1,105 +1,102 @@
 @charset "UTF-8";
 
+
+
 @import url(basic.css);
+
 
 /*-------reg-board--------------------*/
 .reg-board{
-    width:90%;
     margin:50px;
 }
 
-.reg-header{
-    margin-bottom: 20px;
-}
-
+/*-------reg-board--------------------*/
 .reg-body{
-    border:1px solid;
-    font-size:17px;
+    border: 1px solid;
+    margin-top: 20px;
+    width:100%;
 }
 
 .reg-body dl{
     display: flex;
-    margin:0px;
     border-bottom: 1px solid;
-}
-
-.reg-body dt{
-   text-align: center;
-   width: 200px;
-   border-right: 1px solid;
-   background: blanchedalmond;
-} 
-
-.reg-body dd{
-    margin:0px;
-    width:100%;
-    padding:5px;
     border-right: 1px solid;
 }
 
-.reg-body input{
-    border:1px solid;
-    width:100%;
+.reg-body dt{
+    width:200px;
+    text-align: center;
+    font-size: 15px;
+    background: #f0f8d1;
 }
 
-/*----------------------------------*/
-.reg-choice{
-    line-height: 30px;
-    height: 30px;
-}
-
-
-.reg-choice select{
-    height: 20px;
-}
-
-
-.reg-title{
-    line-height: 40px;
-    height: 40px;
-}
-
-
-.reg-title input{
-    height: 30px;
-    font-size:15px;
+.reg-body dd{
     padding:5px;
+    width:100%;
+    border-left: 1px solid;
 }
 
-.reg-file{
+.reg-body input, textarea{
+    border:1px solid #ac9797;
+    width: 100%;
+    height: inherit;
+}
+
+
+
+/*--------------------------------------*/
+
+
+
+
+.reg-choice dt{
+    height: 30px;
     line-height: 30px;
+}
+
+.reg-title dt{
+    height: 40px;
+    line-height: 40px;
+}
+
+.reg-title dd{
     height: 30px;
 }
 
-.reg-file input{
-    height: 20px;
-    border:none;
+
+
+.reg-file dt{
+    height: 36px;
+    line-height: 36px;
 }
 
-.reg-content{
+.reg-content dt{
     height: 200px;
     line-height: 200px;
 }
 
-
-.reg-content textarea{
-    width:100%;
+.reg-content dd{
     height: 190px;
-    font-size:15px;
-    padding:5px;
 }
 
-.reg-tag{
-    line-height: 40px;
+
+.reg-tag dt{
     height: 40px;
+    line-height: 40px;
 }
 
-.reg-tag input{
-    padding:5px;
+.reg-tag dd{
     height: 30px;
 }
 
 
+
+
+
+
+
+
+/*--------reg-tail---------------------*/
 .reg-tail{
     margin-top: 10px;
     text-align: center;

@@ -204,7 +204,6 @@ input[type="search"]{
     border-radius: 50%;
 }
 .user-information{
-    padding: 20px;
     margin-bottom: 50px;
     text-align: center;
 }
@@ -216,7 +215,7 @@ input[type="search"]{
     text-align: center
 }
 .title{
-    font-size: 1.4rem;
+    font-size: 1.7rem;
     font-weight: 500;
     color: white;
     margin: 20px 0 40px;
@@ -225,7 +224,7 @@ input[type="search"]{
     background: #6761c7;
     color: white;
     font-weight: 400;
-    font-size: 1rem;
+    font-size: 1.3rem;
     border-radius: 4px;
     padding: 5px 15px;
     display: inline-block;
@@ -244,18 +243,18 @@ input[type="search"]{
     text-align: center;
     color: white;
     font-size: 1.5rem;
-    display: flex;
     justify-content: space-around;
 }
 .modify{
+	margin-bottom: 20px;
     background: white;
     color: #6761c7;
     font-weight: 550;
     font-size: 1.5rem;
     border-radius: 4px;
     padding: 5px 15px;
-    display: inline-block;
     cursor: pointer;
+    display : inline-block;
     transition: all .6s linear;
 }
 .modify:hover{

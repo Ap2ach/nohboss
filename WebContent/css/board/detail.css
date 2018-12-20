@@ -6,7 +6,6 @@ input{
     border-radius: 5px;
 }
 
-
 /*------detail-board----------------*/
 .detail-board{
     width: 90%;
@@ -55,13 +54,15 @@ input{
     padding:5px;
     padding-top: 10px;
     padding-bottom: 30px;
-    text-align: center;
 }
 
 .d-button>input{
     width:60px;
     height: 40px;
-    margin:5px;
+}
+
+.d-button>input:nth-child(3){
+    float: right;
 }
 
 /*---------d-reply--------------*/
@@ -81,10 +82,60 @@ input{
 }
 
 
+/*-------d-content---------------*/
+.d-reply-content{
+    padding: 20px;
+}
+.d-reply-content div{
+    line-height: 25px;
+    min-height: 30px;
+}
+
+.d-reply-content span:last-child{
+    margin-left: 10px;
+}
+
+/*------r-page-move---------------*/
+.r-page-move{
+    height: 30px;
+    line-height: 30px;
+    text-align: center;
+    padding-top:20px;
+    padding-bottom: 40px;
+    border-bottom: none!important;
+}
+
+
+/*------d-reply-add---------------*/
+
+
+.d-reply-add{
+    border:1px solid;
+    height: 150px;
+    padding:20px;
+    background: #b9b9b9;
+}
+
+.d-reply-add-content{
+    width:100%;
+    height: 80%;
+    line-height: 20px;
+}
+
+
+.d-reply-add-button input{
+    width:80px;
+    height: 40px;
+    font-size: 17px;
+    float: right;
+    margin-top: 5px;
+    border-radius: 5px;
+}
+
 
 /*-------d-page-move-------------*/
 .d-page-move{
-    margin-top: 70px;
+    margin-top: 30px;
 }
 
 .d-page-move dl{
@@ -102,4 +153,4 @@ input{
 
 .d-page-move dd{
     margin-left: 10px;
-}
+}}

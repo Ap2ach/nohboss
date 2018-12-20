@@ -13,13 +13,13 @@
                     <h1 class="hidden">어사이드 카테고리</h1>
 
                     <nav class="aside-category">
-                        <h1>혹!혹!혹!</h1>
+                        <h1><a href="">혹!혹!혹!</a></h1>
 
                         <ul>
-                            <li><a href="">공지사항</a></li>
-                            <li><a href="freeBoard.html">자유게시판</a></li>
-                            <li><a href="reviewBoard.html">리뷰게시판</a></li>
-                            <li><a href="">팁게시판</a></li>
+                            <li><a href="../notice/list">공지사항</a></li>
+                            <li><a href="../free/list">자유게시판</a></li>
+                            <li><a href="../review/list">리뷰게시판</a></li>
+                            <li><a href="../tip/list">팁게시판</a></li>
                         </ul>
                     </nav>
 
