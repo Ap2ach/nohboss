@@ -5,7 +5,6 @@ import java.util.Date;
 public class Board {
 
 	private int id;
-<<<<<<< HEAD
 	private String Title;
 	private String WriterId;
 	private String Content;
@@ -25,7 +24,7 @@ public class Board {
 		this.WriterId = writerId;
 		this.Content = content;
 		this.CategoryId = categoryId;
-=======
+
 	private String title;
 	private String writerId;
 	private String content;
@@ -35,10 +34,6 @@ public class Board {
 	private String categoryId;
 	private String dcId;
 
-	public Board() {
-		super();
->>>>>>> refs/remotes/origin/master
-	}
 
 	public Board(String title, String writerId, String content, String categoryId, String dcId) {
 		super();
