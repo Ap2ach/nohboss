@@ -62,8 +62,6 @@ public class HokMapController extends HttpServlet{
 			
 			int affected = st.executeUpdate();
 			
-
-			
 			con.commit();
 			st.close();
 			con.close();

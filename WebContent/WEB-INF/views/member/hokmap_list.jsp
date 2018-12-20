@@ -18,12 +18,12 @@
     <link href="/css/hokmap/bootstrap.min.css" rel="stylesheet">
     <!-- Custom styles for this template -->
     <link href="/css/hokmap/1-col-portfolio.css" rel="stylesheet">
-    
+    <link rel="icon" type="image/png" href="http://example.com/myicon.png">
 
 </head>
 
 <body>
-    <jsp:include page="/WEB-INF/views/inc/header.jsp"></jsp:include>
+    <jsp:include page="/WEB-INF/views/inc/loginheader.jsp"></jsp:include>
     
     <!-- The Modal -->
     <jsp:include page="/WEB-INF/views/inc/modal.jsp"></jsp:include>
@@ -181,7 +181,6 @@
     <script src="//code.jquery.com/jquery-1.11.1.min.js"></script>
     <script src="/js/member/modal.js"></script>
     <script src="/js/member/join.js"></script>
-    <script src="/js/member/login.js"></script>
     <script src="/js/bootstrap/jquery.min.js"></script>
     <script src="/js/bootstrap/bootstrap.bundle.min.js"></script>
     <script src="/js/hokmap/hokmap.js"></script>

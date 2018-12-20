@@ -84,14 +84,13 @@ function openIdChk(){
 			"chkForm", "width=500, height=300, resizable = no, scrollbars = no");    
 };
 
-function duplechk(){
-	var form = document.register-form;
-
-	if(form.idDuplication.value != "idCheck"){
-		alert("아이디 중복체크를 해주세요.");
-		return false;
-    }
-    };
+function checkValue(){
+	var duple = document.querySelector('input[name="idDuplication"]');
+	 if(duple.value != "idCheck"){
+         alert("아이디 중복체크를 해주세요.");
+         return false;
+     }
+};
 
 	function autoHypenPhone(str){
 		str = str.replace(/[^0-9]/g, '');

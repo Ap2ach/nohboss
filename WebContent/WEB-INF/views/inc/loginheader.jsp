@@ -19,7 +19,7 @@
 		<div class="header-sub-container">
 			<div class="btns">
 				<h1 class="hidden">�α���</h1>
-				<a href="#" class="login-btn" id="login-btn" onclick="modallogin()">LOGIN</a>
+				<a href="#" class="login-btn" id="login-btn" onclick="modallogin()">LOGOUT</a>
 				<div class="">
 					<a href="">MyPage</a>
 				</div>

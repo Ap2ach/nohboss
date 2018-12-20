@@ -10,17 +10,21 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
+import com.google.gson.Gson;
 import com.muzihok.web.entity.Member;
 import com.muzihok.web.service.AuthService;
 import com.muzihok.web.service.jdbc.JdbcAuthService;
 
-@WebServlet("/member/joinChk")
-public class DupleCheckController extends HttpServlet {
-	
+
+@WebServlet("/member/login")
+public class LoginController extends HttpServlet {
 	@Override
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-		// TODO Auto-generated method stub
-		RequestDispatcher dispatcher = request.getRequestDispatcher("/WEB-INF/views/member/idCheckForm.jsp");
+		response.setCharacterEncoding("UTF-8");
+		response.setContentType("text/html charset=UTF-8");
+		//System.out.println(request.getSession().getAttribute("uid"));
+		
+		RequestDispatcher dispatcher = request.getRequestDispatcher("/WEB-INF/views/member/login.jsp");
 		dispatcher.forward(request, response);
 	}
 	
@@ -29,29 +33,27 @@ public class DupleCheckController extends HttpServlet {
 		// TODO Auto-generated method stub
 		response.setCharacterEncoding("UTF-8");
 		response.setContentType("text/html charset=UTF-8");
-		//String userId = request.getParameter("id");
-		//System.out.println(userId);
 		PrintWriter out = response.getWriter();
 		
 		AuthService service = new JdbcAuthService();
-		//int error= service.chkId(userId);
 		
-		String uid = request.getParameter("id");
+		String uid=request.getParameter("id");
+		System.out.println("uid:"+uid);
+		String pwd =request.getParameter("pwd");
+		Gson gson = new Gson();
+
 		Member member = service.getMember(uid);
-		System.out.println(uid);
-		System.out.println(member);
-		if(member==null) {
-			out.print("false");
-		System.out.println(member);
-		}
-		else {
-			out.print("true");
-			System.out.println(member);
-		}
-//		RequestDispatcher dispatcher = request.getRequestDispatcher("/WEB-INF/views/member/idCheckForm.jsp");
-//		dispatcher.forward(request, response);
-////		response.sendRedirect("/member/joinChk");
+		System.out.println("¸â¹ö:"+member);
 		
-	
-	}
+		String json = gson.toJson(member);
+		 
+		if(member != null) {
+			    out.print(json);
+		}
+		    
+//		  }else if (uid.equals(member.getId()) && password.equals(member.getPwd())) {
+//			  out.print("true");
+//		
+//	}
+}
 }

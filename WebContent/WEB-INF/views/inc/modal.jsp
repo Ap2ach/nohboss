@@ -21,7 +21,7 @@
 					<div class="panel-body">
 						<div class="row">
 							<div class="col-lg-12">
-								<form id="login-form" action="list" method="post" role="form" style="display: block;">
+								<form id="login-form" action="login" method="post" role="form" style="display: block;" >
 									<div class="form-group">
 										<input type="text" name="username" id="uid" tabindex="1" class="form-control" placeholder="아이디" value="">
 									</div>
@@ -34,8 +34,8 @@
 									<div class="form-group">
 										<div class="row">
 											<div class="col-sm-6 col-sm-offset-3">
-												<input type="submit" name="login-submit" id="login-submit" tabindex="4" class="form-control btn btn-login"
-												 value="Log In">
+												<input type="button" name="login-submit" id="login-submit" tabindex="4" class="form-control btn btn-login"
+												 value="Log In" onclick="login()">
 											</div>
 										</div>
 									</div>
@@ -43,13 +43,14 @@
 										<div class="row">
 											<div class="col-lg-12">
 												<div class="text-center">
-													<a href="https://phpoll.com/recover" tabindex="5" class="forgot-password">비밀번호 찾기</a>
+													<a href="" tabindex="5" class="forgot-password">비밀번호 찾기</a>
 												</div>
 											</div>
 										</div>
 									</div>
 								</form>
-								<form id="register-form" action="list" name="userInfo" method="post" role="form" style="display: none;" onsubmit="return duplechk()">
+							
+									   <form id="register-form" method="post" action="list" name="userInfo" onsubmit="return checkValue()" class="hidden">
 									<div class="form-group dupleId">
 										<input type="text" name="reg-uid" id="id" tabindex="1" class="form-control" placeholder="아이디" value="" onkeydown="inputIdChk()">
 										<input type="button" name="dupl-check" id="duplchk" value="중복확인" class="form-control btn btn-register" onclick="openIdChk()" />
@@ -84,8 +85,6 @@
 											<div class="col-sm-6 col-sm-offset-3">
 												<input type="submit" name="register-submit" id="register-submit" tabindex="9" class="form-control btn btn-register"
 												 value="Register Now">
-												<input type="button" id="register-cancle" tabindex="10" class="form-control btn btn-register cancle"
-												 value="CANCLE" onclick="goFirstForm()" />
 											</div>
 										</div>
 									</div>

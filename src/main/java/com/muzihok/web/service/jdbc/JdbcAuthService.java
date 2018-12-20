@@ -26,7 +26,7 @@ public class JdbcAuthService implements AuthService {
 		try {
 			Class.forName("oracle.jdbc.driver.OracleDriver");
 		
-		Connection con = DriverManager.getConnection(url,"c##sist","dclass");
+		Connection con = DriverManager.getConnection(url,"c##muzihok","hokclass");
 		PreparedStatement st = con.prepareStatement(sql);
 		st.setString(1, memberId);
 		ResultSet rs =st.executeQuery();
@@ -154,6 +154,12 @@ public class JdbcAuthService implements AuthService {
 		
 		return result;
 		
+	}
+
+	@Override
+	public int chkId(String userId) {
+		// TODO Auto-generated method stub
+		return 0;
 	}
 
 	
