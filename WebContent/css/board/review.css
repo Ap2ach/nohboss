@@ -21,6 +21,10 @@ dt, dd{
 
 
 /*-----review-board---------------*/
+.review-board{
+	padding:10px;
+}
+
 .review-board ul{
     border-top : 1px solid #e3e3e3;
     

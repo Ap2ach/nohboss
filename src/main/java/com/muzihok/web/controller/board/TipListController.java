@@ -11,18 +11,13 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
 import com.muzihok.web.entity.BoardView;
-import com.muzihok.web.entity.Paging;
 import com.muzihok.web.service.BoardService;
 import com.muzihok.web.service.jdbc.JdbcBoardService;
 
-@WebServlet("/board/free/list")
-<<<<<<< HEAD
-public class FreeListController extends HttpServlet {
-=======
 
-public class FreeListController extends HttpServlet{
->>>>>>> refs/remotes/origin/master
-
+@WebServlet("/board/tip/list")
+public class TipListController extends HttpServlet{
+	
 	@Override
 	protected void doGet(HttpServletRequest request, HttpServletResponse response)
 			throws ServletException, IOException {
@@ -30,7 +25,7 @@ public class FreeListController extends HttpServlet{
 
 		BoardService service = new JdbcBoardService();
 
-		String boardCategory = "자유게시판";
+		String boardCategory = "팁게시판";
 		
 		String page_ = request.getParameter("p");
 		int page = 1;
@@ -54,9 +49,19 @@ public class FreeListController extends HttpServlet{
 			list = service.getBoardViewList(boardCategory, page, sort, query, field);
 		}
 
+		// totalCount 쿼리
+		/*int totalCount = service.GetTotalCount(boardCategory);
 
-		RequestDispatcher dispatcher = request.getRequestDispatcher("../../WEB-INF/views/board/free/list.jsp");
+		Paging paging = new Paging();
+		paging.setPageNo(page);
+		paging.setPageSize(10);
+		paging.setTotalCount(totalCount);*/
+		
+		
+		RequestDispatcher dispatcher = request.getRequestDispatcher("../../WEB-INF/views/board/tip/list.jsp");
 		request.setAttribute("list", list);
+
+		/*request.setAttribute("paging", paging);*/
 			
 		dispatcher.forward(request, response);
 	}

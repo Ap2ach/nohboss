@@ -11,18 +11,13 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
 import com.muzihok.web.entity.BoardView;
-import com.muzihok.web.entity.Paging;
 import com.muzihok.web.service.BoardService;
 import com.muzihok.web.service.jdbc.JdbcBoardService;
 
-@WebServlet("/board/free/list")
-<<<<<<< HEAD
-public class FreeListController extends HttpServlet {
-=======
 
-public class FreeListController extends HttpServlet{
->>>>>>> refs/remotes/origin/master
-
+@WebServlet("/board/tag")
+public class TagController extends HttpServlet{
+	
 	@Override
 	protected void doGet(HttpServletRequest request, HttpServletResponse response)
 			throws ServletException, IOException {
@@ -53,12 +48,13 @@ public class FreeListController extends HttpServlet{
 		if (query != null && !query.equals("")) {
 			list = service.getBoardViewList(boardCategory, page, sort, query, field);
 		}
-
-
-		RequestDispatcher dispatcher = request.getRequestDispatcher("../../WEB-INF/views/board/free/list.jsp");
+		
+		
+		RequestDispatcher dispatcher = request.getRequestDispatcher("../../WEB-INF/views/board/tag/list.jsp");
 		request.setAttribute("list", list);
+
 			
 		dispatcher.forward(request, response);
 	}
-
+	
 }
