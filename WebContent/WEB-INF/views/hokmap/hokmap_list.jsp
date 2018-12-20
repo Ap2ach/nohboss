@@ -18,7 +18,6 @@
     <link href="/css/hokmap/bootstrap.min.css" rel="stylesheet">
     <!-- Custom styles for this template -->
     <link href="/css/hokmap/1-col-portfolio.css" rel="stylesheet">
-    
 
 </head>
 
@@ -59,7 +58,9 @@
                         </div>
                     </div>
                     <!-- /.row -->
+
                     <hr>
+
                     <!-- Project Two -->
                     <div class="row">
                         <div class="col-md-7">
@@ -181,7 +182,6 @@
     <script src="//code.jquery.com/jquery-1.11.1.min.js"></script>
     <script src="/js/member/modal.js"></script>
     <script src="/js/member/join.js"></script>
-    <script src="/js/member/login.js"></script>
     <script src="/js/bootstrap/jquery.min.js"></script>
     <script src="/js/bootstrap/bootstrap.bundle.min.js"></script>
     <script src="/js/hokmap/hokmap.js"></script>

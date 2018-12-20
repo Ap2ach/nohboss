@@ -2,10 +2,7 @@ package com.muzihok.web.service;
 
 import java.util.List;
 
-import com.muzihok.web.entity.Member;
-import com.muzihok.web.entity.MemberRole;
-
-public interface AuthService {
+public class AuthService {
 
 	String getDefaultRoleId(String memberId);
 	
@@ -14,7 +11,5 @@ public interface AuthService {
 	List<MemberRole> getMemberRolesById(String uid);
 	
 	boolean hasRole(String uid, String string);
-
-	int chkId(String userId);
 	
 }

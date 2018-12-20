@@ -54,13 +54,14 @@ public class HokMapController extends HttpServlet{
 			PreparedStatement st = con.prepareStatement(sql);
 			st.setString(1, uid);
 			st.setString(2, pwd);
-			st.setString(3, name);
-			st.setString(4, phone);
-			st.setString(5, email);
-			st.setString(6, birth);
-			st.setString(7, nickname);
-			
+			st.setString(3, nickname);
+			st.setString(4, name);
+			st.setString(5, phone);
+			st.setString(6, email);
+			st.setString(7, birth);
 			int affected = st.executeUpdate();
+			
+
 			
 			con.commit();
 			st.close();

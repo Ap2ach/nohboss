@@ -16,6 +16,7 @@ import com.muzihok.web.service.BoardService;
 import com.muzihok.web.service.jdbc.JdbcBoardService;
 
 @WebServlet("/board/free/list")
+
 public class FreeListController extends HttpServlet {
 
 	@Override

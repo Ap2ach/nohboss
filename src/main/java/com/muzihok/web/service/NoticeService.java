@@ -1,16 +1,5 @@
 package com.muzihok.web.service;
 
-<<<<<<< HEAD
-import java.util.Date;
-import java.util.List;
-import java.util.Map;
-
-import com.muzihok.web.entity.Notice;
-
-public interface NoticeService {
-	List<Notice> getNotice();
-	List<Notice> getNotice(int page);
-=======
 import java.util.List;
 
 import com.muzihok.web.entity.Notice;
@@ -31,5 +20,4 @@ public interface NoticeService {
 	
 	
 	
->>>>>>> refs/remotes/origin/master
 }

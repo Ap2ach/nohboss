@@ -5,26 +5,6 @@ import java.util.Date;
 public class Board {
 
 	private int id;
-	private String Title;
-	private String WriterId;
-	private String Content;
-	private Date Regdate;
-	private int Hit;
-	private int Recommend;
-	private int CategoryId;
-	
-	
-	// for insert into
-	public Board() {
-		// TODO Auto-generated constructor stub
-	}
-	
-	public Board(String title, String writerId, String content, int categoryId) {
-		this.Title = title;
-		this.WriterId = writerId;
-		this.Content = content;
-		this.CategoryId = categoryId;
-
 	private String title;
 	private String writerId;
 	private String content;
@@ -34,6 +14,9 @@ public class Board {
 	private String categoryId;
 	private String dcId;
 
+	public Board() {
+		super();
+	}
 
 	public Board(String title, String writerId, String content, String categoryId, String dcId) {
 		super();

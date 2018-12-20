@@ -22,7 +22,7 @@ public class JdbcReportService implements ReportService {
 		
 		String sql_1 ="insert into report (id,writer_id,reg_type,reg_title,reg_content) values (BOARD_SEQ.nextval,?,?,?,?)";
 		String sql_2= "select id from (select * from REPORT order by regdate desc ) where rownum=1";
-		String sql_3= "insert into FILE(ID, NAME, BOARD_ID) "
+		String sql_3= "insert into file_BOARD (ID, NAME, BOARD_ID) "
 	            + "VALUES(FILE_SEQ.NEXTVAL, ?, ?)";
 
 		String url = "jdbc:oracle:thin:@211.238.142.251:1521:orcl"; 
@@ -48,14 +48,16 @@ public class JdbcReportService implements ReportService {
 			rs.close();
 			st_2.close();
 			
-			PreparedStatement st_3 = con.prepareStatement(sql_3);
+			
 			for(String file : files) {
+				PreparedStatement st_3 = con.prepareStatement(sql_3);
 				st_3.setString(1, file);
 				st_3.setInt(2, id);
 				affected=st_3.executeUpdate();
 				if(affected==0)	return 0;
+				st_3.close();
 			}
-			st_3.close();
+			
 			
 			con.commit();
 			con.close();
@@ -109,55 +111,60 @@ public class JdbcReportService implements ReportService {
 			String url = "jdbc:oracle:thin:@211.238.142.251:1521:orcl"; 
 			Class.forName("oracle.jdbc.driver.OracleDriver");
 			Connection con = DriverManager.getConnection(url,"c##muzihok","hokclass");
-			PreparedStatement st = null;
-			String qq=query;
+			PreparedStatement st = null;	
+			ResultSet rs =null;
 			if(category.equals("total")) {
-				//제목키워드 = 쿼리  or 내용키워드 =쿼리
+
 				sql = "select * from "+
 			    "(select rownum num, n.* from" + 
-			    	    " (select * from report where writer_id like '%?%' and "+
-			    "reg_title like '%?%' or reg_content like '%?%' "+
+			    	    " (select * from report where writer_id like ? and "+
+			    "reg_title like ? or reg_content like ? "+
 			    	    " order by regdate desc) n ) "+
 			    "where num between ? and ?";
 				
 				st = con.prepareStatement(sql);	
 				
-				st.setString(1, uid);
-				st.setString(2, query);
-				st.setString(3, "");
+				st.setString(1, "%"+uid+"%");
+				st.setString(2, "%"+query+"%");
+				/*System.out.println("%"+query+"%");*/
+				st.setString(3, "%"+query+"%");
+				
 				st.setInt(4, start);
 				st.setInt(5, end);
+				rs =st.executeQuery();
 			}else if (category.equals("title")){
-				//제목 키워드 = 쿼리 
+
 				sql = "select * from "+
 					    "(select rownum num, n.* from" + 
-					    	    " (select * from report where writer_id like '%?%' and "+
-					    "reg_title like '%?%' "+
+					    	    " (select * from report where writer_id like ? and "+
+					    "reg_title like ?"+
 					    	    " order by regdate desc) n ) "+
 					    "where num between ? and ?";
 				
 				st = con.prepareStatement(sql);
-				st.setString(1, uid);
-				st.setString(2, query);
+				st.setString(1, "%"+uid+"%");
+				st.setString(2, "%"+query+"%");
 				st.setInt(3, start);
 				st.setInt(4, end);
+				rs =st.executeQuery();
 			}else if (category.equals("content")) {
 			//	내용키워드 = 쿼리 
 				sql = "select * from "+
 					    "(select rownum num, n.* from" + 
-					    	    " (select * from report where writer_id like '%?%' and "+
-					    "reg_content like '%?%' "+
-					    	    "and regdate between sysdate-? and sysdate order by regdate desc) n ) "+
+					    	    " (select * from report where writer_id like ? and "+
+					    "reg_content like ? "+
+					    	    " order by regdate desc) n ) "+
 					    "where num between ? and ?";
 				
 				st = con.prepareStatement(sql);
-				st.setString(1, uid);
-				st.setString(2, query);
+				st.setString(1, "%"+uid+"%");
+				st.setString(2, "%"+query+"%");
 				st.setInt(3, start);
 				st.setInt(4, end);
+				rs =st.executeQuery();
 			}else {return null;}
 			
-			ResultSet rs =st.executeQuery();
+			
 			
 			while(rs.next()) {
 				Report report = new Report(
@@ -304,7 +311,7 @@ public class JdbcReportService implements ReportService {
 		//방금 추가한 문의 답변 id 따오기 
 		String sql_2="select id from (select * from reportAnswer order by regdate desc ) where rownum=1";
 		//해당 id와  첨부 파일들 연결후, 파일 테이블에 추가 
-		String sql_3=  "insert into FILE(ID, NAME, BOARD_ID) "
+		String sql_3=  "insert into FILE_BOARD (ID, NAME, BOARD_ID) "
 	            + "VALUES(FILE_SEQ.NEXTVAL, ?, ?)";
 		//해당 답변의 질문자 게시글 답변완료 true로 바꾸자. 
 		String sql_4 = "update report set hasAnswer=1 where id=?";
@@ -366,9 +373,9 @@ public class JdbcReportService implements ReportService {
 		//해당 id에 대한 답변 내용 변경한다.
 		String sql_1 = "update reportAnswer set ans_title=?, ans_content=? where id=?" ;
 		//게시글 아이디 ... 수정 대상  게시글이 갖고 있는 파일 정보 전부 삭제한다. 
-		String sql_2 = "delete from FILE where board_id=?";	
+		String sql_2 = "delete from FILE_BOARD where board_id=?";	
 		//해당 게시글에 새로운 파일로 추가한다. (이건 파일 갯수에 따라서 )
- 		String sql_3=  "insert into FILE(ID, NAME, BOARD_ID) VALUES(FILE_SEQ.NEXTVAL, ?, ?)";
+ 		String sql_3=  "insert into FILE_BOARD (ID, NAME, BOARD_ID) VALUES(FILE_SEQ.NEXTVAL, ?, ?)";
 
 		String url = "jdbc:oracle:thin:@211.238.142.251:1521:orcl"; 
 		int affected=0;

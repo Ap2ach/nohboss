@@ -182,10 +182,6 @@ public class JdbcBoardService implements BoardService {
 					st.setInt(4, end);
 				}
 
-				System.out.println("sql: " + sql);
-				System.out.println("boardcategory: " + boardcategory);
-				System.out.println("dcId: " + dcId);
-
 				ResultSet rs = st.executeQuery();
 
 				while (rs.next()) {
