@@ -17,8 +17,9 @@ public class ReportAnswer {
 	}
 
 
-	//insert
-	public ReportAnswer(int reId, String adminId, String ansTitle, String ansContent) {
+	//insdert
+	public ReportAnswer(int id, int reId, String adminId, String ansTitle, String ansContent) {
+		this.id=id;
 		this.reId = reId;
 		this.adminId = adminId;
 		this.ansTitle = ansTitle;

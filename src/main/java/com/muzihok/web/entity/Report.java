@@ -7,8 +7,9 @@ public class Report {
 	private String writerId;		//작성자 ID
 	private Date regDate;			//문의 등록일
 	private String regType;			//문의 유형 
-	private String title;			//문의 제목
-	private String content;			//문의 내용
+	private String regTitle;			//문의 제목
+	private String regContent;			//문의 내용
+	private boolean hasAnswer;		//답변여부 
 	
 	public Report() {
 		super();
@@ -17,21 +18,22 @@ public class Report {
 
 
 	//질문 작성시... 
-	public Report(String writerId,String regType, String title, String content) {
+	public Report(String writerId,String regType, String regTitle, String regContent) {
 		this.writerId = writerId;
 		this.regType=regType;
-		this.title = title;
-		this.content = content;
+		this.regTitle = regTitle;
+		this.regContent = regContent;
 	}
 	//질문 조회시 . 
 	// 메소드 추가는 그때그때 생각해보자 
-	public Report(int id, String writerId, Date regDate, String regType, String title, String content) {
+	public Report(int id, String writerId, Date regDate, String regType, String regTitle, String regContent, boolean hasAnswer) {
 		this.id = id;
 		this.writerId = writerId;
 		this.regDate = regDate;
 		this.regType=regType;
-		this.title = title;
-		this.content = content;
+		this.regTitle = regTitle;
+		this.regContent = regContent;
+		this.hasAnswer= hasAnswer;
 	}
 
 
@@ -66,22 +68,22 @@ public class Report {
 
 
 	public String getTitle() {
-		return title;
+		return regTitle;
 	}
 
 
-	public void setTitle(String title) {
-		this.title = title;
+	public void setTitle(String regTitle) {
+		this.regTitle = regTitle;
 	}
 
 
 	public String getContent() {
-		return content;
+		return regContent;
 	}
 
 
-	public void setContent(String content) {
-		this.content = content;
+	public void setContent(String regContent) {
+		this.regContent = regContent;
 	}
 
 	
@@ -95,12 +97,25 @@ public class Report {
 		this.regType = regType;
 	}
 
+	
+
+	public boolean isHasAnswer() {
+		return hasAnswer;
+	}
+
+
+	public void setHasAnswer(boolean hasAnswer) {
+		this.hasAnswer = hasAnswer;
+	}
+
 
 	@Override
 	public String toString() {
 		return "Report [id=" + id + ", writerId=" + writerId + ", regDate=" + regDate + ", regType=" + regType
-				+ ", title=" + title + ", content=" + content + "]";
+				+ ", regTitle=" + regTitle + ", regContent=" + regContent + ", hasAnswer=" + hasAnswer + "]";
 	}
 
+
 	
+
 }
