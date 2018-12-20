@@ -15,8 +15,8 @@ import com.muzihok.web.service.BoardService;
 import com.muzihok.web.service.jdbc.JdbcBoardService;
 
 
-@WebServlet("/board/tip/list")
-public class TipListController extends HttpServlet{
+@WebServlet("/board/tag")
+public class TagController extends HttpServlet{
 	
 	@Override
 	protected void doGet(HttpServletRequest request, HttpServletResponse response)
@@ -25,7 +25,7 @@ public class TipListController extends HttpServlet{
 
 		BoardService service = new JdbcBoardService();
 
-		String boardCategory = "팁게시판";
+		String boardCategory = "자유게시판";
 		
 		String page_ = request.getParameter("p");
 		int page = 1;
@@ -48,22 +48,13 @@ public class TipListController extends HttpServlet{
 		if (query != null && !query.equals("")) {
 			list = service.getBoardViewList(boardCategory, page, sort, query, field);
 		}
-
-		// totalCount 쿼리
-		/*int totalCount = service.GetTotalCount(boardCategory);
-
-		Paging paging = new Paging();
-		paging.setPageNo(page);
-		paging.setPageSize(10);
-		paging.setTotalCount(totalCount);*/
 		
 		
-		RequestDispatcher dispatcher = request.getRequestDispatcher("../../WEB-INF/views/board/tip/list.jsp");
+		RequestDispatcher dispatcher = request.getRequestDispatcher("../../WEB-INF/views/board/tag/list.jsp");
 		request.setAttribute("list", list);
 
-		/*request.setAttribute("paging", paging);*/
 			
 		dispatcher.forward(request, response);
 	}
-
+	
 }
