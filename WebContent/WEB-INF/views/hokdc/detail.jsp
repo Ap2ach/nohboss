@@ -1,75 +1,22 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <!DOCTYPE html>
 <html>
     <head>
         <meta charset="UTF-8" name="viewport" content="width=device-width, initial-scale=1">
-        <link rel="stylesheet" type="text/css" media="screen" href="/css/hokdc/list.css"/>
+        <link rel="stylesheet" type="text/css" media="screen" href="/css/hokdc/hokdc.css"/>
         <title>혹한할인?!</title>
     </head>
     <body>
-        <header>
-            <div class="content-container flex">
-                <div class="header-logo-container">
-                    <a href=""><img src="/image/logo.png" width=166px height=70px></a>
-                </div>
-                <div class="header-main-container"> 
-                    <nav>
-                        <h1 class="hidden">메인메뉴</h1>
-                        <ul>
-                            <li class="hok-hover now"><a href="#">DISCOUNT</a></li>
-                            <li class="hok-hover"><a href="#">HOK! MAP</a></li>
-                            <li class="hok-hover"><a href="#">HOK! HOK!</a></li>
-                            <li class="hok-hover"><a href="#"> CENTER</a></li>
-                        </ul>
-                    </nav>
-                </div>
-                <div class="header-sub-container">
-                    <nav>
-                        <h1 class="hidden">로그인</h1>
-                        <ul>
-                            <li class=""><a href="">LOGOUT</a></li>
-                            <li class=""><a href="">MyPage</a></li>
-                        </ul>
-                    </nav>
-                </div>  
-            </div>
-        </header>
-        <div id="visual">
-            <div class="content-container">
-                <section id="search-form" >
-                    <h1 class="hidden">비쥬얼검색창</h1>
-                        <div>
-                            <input type="text" minlength="1 "maxlength="10" placeholder="검색어를 입력하세요" class="margin-r-20" />
-                            <input class="btn" type="submit" value=" " alt="검색" />
-                        </div>
-                </section>
-            </div>
-        </div>
-
-        <div id="body">
+     <!-- 헤더 -->
+    <jsp:include page="/WEB-INF/views/inc/header.jsp"></jsp:include>
+    <!-- 검색 -->
+    <jsp:include page="/WEB-INF/views/inc/search.jsp"></jsp:include>     
+     	<div id="body">
             <div class="content-container" style="display:flex;">
-                <div class="body-aside-container">
-                    <aside>
-                        <h1 class="hidden">어사이드리모콘</h1>
-                        <div class="menu-bar menu-bar-dcmenu margin-r-20" >
-                            <div class="text-center">
-                                <div class="menu-bar-category">
-                                        카테고리
-                                </div>
-        
-                                <div>
-                                    <ul class="hover-back">
-                                        <a href=""><li class="now">MyList</li></a>
-                                        <a href=""><li class="">한식</li></a>
-                                        <a href=""><li class="">편의점</li></a>
-                                        <a href=""><li class="">가족/뷔페</li></a>
-                                    </ul>
-                                    
-                                </div>
-                            </div>
-                        </div>
-                    </aside>
+                <div class="aside-container">
+                    <jsp:include page="inc/asidemenu.jsp"/>
                 </div>
                 <div class="body-main-container">
                     
@@ -80,9 +27,9 @@
                                 <div class="">
                                     <ul class="list text-right margin-t-20 margin-b-20 margin-r-20">
                                         <li><a  href=""><input class="btn home-btn page-path" type="button" value=""/></a></li>
-                                        <li><img class="page-path" src="/image/icon/next-16.png" ></li>
+                                        <li><img class="page-path" src="/WebContent/image/icon/next-16.png" ></li>
                                         <li class="page-path"><a href="list" >혹한할인!</a></li>
-                                        <li><img class="page-path" src="/image/icon/next-16.png" ></li>
+                                        <li><img class="page-path" src="/WebContent/image/icon/next-16.png" ></li>
                                         <li class="page-path">편의점</li>
                                     </ul>
                                 </div>
@@ -90,7 +37,7 @@
                                 <div class="">
                                         <div class="dc-detail-header flex">
                                             <div>
-                                                <img class="dc-detail-brand-logo"  src="/image/brand/family/vips.jpg">
+                                                <img class="dc-detail-brand-logo"  src="/WebContent/image/brand/family/vips.jpg">
                                             </div>
                                             <div class="dc-detail-title" >텐더 3 핫윙3 3,500원! </div>
                                             <div class="dc-detail-start-date">(12/11</div>
@@ -100,11 +47,11 @@
                                         </div>
                                         <div class="">
                                             <ul class="list text-right margin-t-20 margin-b-20" style="width:930px;">
-                                                <li><img src="/image/icon/eye-24.png" class="page-path" /></li>
+                                                <li><img src="/WebContent/image/icon/eye-24.png" class="page-path" /></li>
                                                 <li class="page-path">100</li>
-                                                <li><img src="/image/icon/calendar-24.png" class="page-path"></li>
+                                                <li><img src="/WebContent/image/icon/calendar-24.png" class="page-path"></li>
                                                 <li class="page-path">2018-12-12</li>
-                                                <li><img class="page-path" src="/image/icon/likechk-24.png"></li>
+                                                <li><img class="page-path" src="/WebContent/image/icon/likechk-24.png"></li>
                                             </ul>
                                             <hr/><br><br><br><br>
                                         </div>
@@ -156,10 +103,7 @@
                 
             </div>
         </div>
-        <footer>
-            <div class="content-container">
-                FOOTER
-            </div>
-        </footer>
+        <!-- 푸터 -->
+   	<jsp:include page="/WEB-INF/views/inc/footer.jsp"></jsp:include>
     </body>
 </html>

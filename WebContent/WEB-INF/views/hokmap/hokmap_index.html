@@ -10,6 +10,7 @@
     <link rel="stylesheet" type="text/css" media="screen" href="/WebContent/css/inc/common.css" />
     <link rel="stylesheet" type="text/css" media="screen" href="/WebContent/css/inc/pager.css" />
     <link rel="stylesheet" type="text/css" media="screen" href="/WebContent/css/inc/searchform.css" />
+    <link rel="stylesheet" type="text/css" media="screen" href="/WebContent/css/member/join.css" />
     <script type="text/javascript" src="//dapi.kakao.com/v2/maps/sdk.js?appkey=a621bc0c3c3a2693ab4fd406c0080068&libraries=services"></script>
     <!-- Bootstrap core CSS -->
     <link href="/WebContent/css/hokmap/bootstrap.min.css" rel="stylesheet">
@@ -73,21 +74,119 @@
                 </nav>
             </div>
             <div class="header-sub-container">
-                <nav>
+                <div class="btns">
                     <h1 class="hidden">로그인</h1>
-                    <ul>
-                        <li class=""><a href="">LOGOUT</a></li>
-                        <li class=""><a href="">MyPage</a></li>
-                    </ul>
-                </nav>
-            </div>
-        </div>
+                    <a href="#"  class="login-btn" id="login-btn" >LOGIN</a>
+                    <div class=""><a href="">MyPage</a></div>
+                </div>
+                </div>
     </header>
+    <!-- The Modal -->
+    <div id="myModal" class="modal">
+
+        <!-- Modal content -->
+        <div class="join-container">
+            <div class="row">
+                <div class="col-md-6 col-md-offset-3">
+                        <span class="close">&times;</span>
+                            <div class="panel panel-login">
+                                <div class="panel-heading">
+                                    <div class="row">
+                                        <div class="col-xs-6">
+                                            <a href="#" class="active" id="login-form-link">로그인</a>
+                                        </div>
+                                        <div class="col-xs-6">
+                                            <a href="#" id="register-form-link">회원가입</a>
+                                        </div>
+                                    </div>
+                                    <hr>
+                                </div>
+                                <div class="panel-body">
+                                    <div class="row">
+                                        <div class="col-lg-12">
+                                            <form id="login-form" action="https://phpoll.com/login/process" method="post"
+                                                role="form" style="display: block;">
+                                                <div class="form-group">
+                                                    <input type="text" name="username" id="uid" tabindex="1" class="form-control"
+                                                        placeholder="아이디" value="">
+                                                </div>
+                                                <div class="form-group">
+                                                    <input type="password" name="password" id="pwd" tabindex="2"
+                                                        class="form-control" placeholder="비밀번호">
+                                                </div>
+                                                <div class="form-group text-center">
+                                                    <input type="checkbox" tabindex="3" class="" name="remember" id="remember">
+                                                    <label for="remember"> 정보 저장</label>
+                                                </div>
+                                                <div class="form-group">
+                                                    <div class="row">
+                                                        <div class="col-sm-6 col-sm-offset-3">
+                                                            <input type="submit" name="login-submit" id="login-submit"
+                                                                tabindex="4" class="form-control btn btn-login" value="Log In">
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="form-group">
+                                                    <div class="row">
+                                                        <div class="col-lg-12">
+                                                            <div class="text-center">
+                                                                <a href="https://phpoll.com/recover" tabindex="5" class="forgot-password">비밀번호
+                                                                    찾기</a>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </form>
+                                            <form id="register-form" action="https://phpoll.com/register/process"
+                                                method="post" role="form" style="display: none;">
+                                                <div class="form-group">
+                                                    <input type="text" name="reg-uid" id="userid" tabindex="1" class="form-control"
+                                                        placeholder="아이디" value="">
+                                                </div>
+                                                <div class="form-group">
+                                                        <input type="text" name="nicname" id="nicname"
+                                                            tabindex="2" class="form-control" placeholder="닉네임">
+                                                    </div>
+                                                
+                                                <div class="form-group">
+                                                    <input type="password" name="reg-pwd" id="reg-pwd" tabindex="2"
+                                                        class="form-control" placeholder="비밀번호" value="">
+                                                </div>
+                                                <div class="form-group">
+                                                    <input type="password" name="confirm-pwd" id="confirm-pwd"
+                                                        tabindex="2" class="form-control" placeholder="비밀번호 확인" value="">
+                                                </div>
+                                                <div class="form-group">
+                                                        <input type="email" name="email" id="email" tabindex="1" class="form-control"
+                                                            placeholder="이메일" value="">
+                                                    </div>
+                                                <div class="form-group">
+                                                        <input type="date" name="birth" id="birth"
+                                                            tabindex="2" class="form-control" min='1899-01-01' max='2018-12-31'>
+                                                    </div>
+                                                <div class="form-group">
+                                                    <div class="row">
+                                                        <div class="col-sm-6 col-sm-offset-3">
+                                                            <input type="submit" name="register-submit" id="register-submit"
+                                                                tabindex="4" class="form-control btn btn-register"
+                                                                value="Register Now">
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </form>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
     <div id="visual">
         <div class="content-container">
             <section id="search-form">
                 <h1 class="hidden">비쥬얼검색창</h1>
-                <form>
+                <form class="search-form">
                     <select>
                         <option value="0">혹DC</option>
                         <option value="0">혹MAP</option>
@@ -137,7 +236,8 @@
                     <div class="row">
                         <div class="col-md-7">
                             <a href="#">
-                                <img class="img-fluid rounded mb-3 mb-md-0" src="/WebContent/image/slide-image/twice2.jpg" alt="">
+                                <img class="img-fluid rounded mb-3 mb-md-0" src="/WebContent/image/slide-image/twice2.jpg"
+                                    alt="">
                             </a>
                         </div>
                         <div class="col-md-5">
@@ -151,14 +251,13 @@
                         </div>
                     </div>
                     <!-- /.row -->
-
                     <hr>
-
                     <!-- Project Three -->
                     <div class="row">
                         <div class="col-md-7">
                             <a href="#">
-                                <img class="img-fluid rounded mb-3 mb-md-0" src="/WebContent/image/slide-image/twice3.jpg" alt="">
+                                <img class="img-fluid rounded mb-3 mb-md-0" src="/WebContent/image/slide-image/twice3.jpg"
+                                    alt="">
                             </a>
                         </div>
                         <div class="col-md-5">
@@ -180,7 +279,8 @@
 
                         <div class="col-md-7">
                             <a href="#">
-                                <img class="img-fluid rounded mb-3 mb-md-0" src="/WebContent/image/slide-image/twice4.jpg" alt="">
+                                <img class="img-fluid rounded mb-3 mb-md-0" src="/WebContent/image/slide-image/twice4.jpg"
+                                    alt="">
                             </a>
                         </div>
                         <div class="col-md-5">
@@ -190,13 +290,11 @@
                                 rem officiis illum aliquam perspiciatis aspernatur quod modi hic nemo qui soluta aut
                                 eius fugit
                                 quam in suscipit?</p>
-                            <a class="btn btn-primary" href="#">위치 검색</a>
+                            <a class="btn btn-dark" href="#">위치 검색</a>
                         </div>
                     </div>
                     <!-- /.row -->
-
                     <hr>
-
                     <!-- Pagination -->
                     <ul class="pagination justify-content-center">
                         <li class="page-item">
@@ -223,8 +321,7 @@
                     </ul>
                 </div>
                 <!-- /.container -->
-                <script src="jquery.min.js"></script>
-                <script src="bootstrap.bundle.min.js"></script>
+
             </div>
             <div class="aside-container">
                 <div class="map_wrap">
@@ -256,6 +353,9 @@
             FOOTER
         </div>
     </footer>
+    <script src="//code.jquery.com/jquery-1.11.1.min.js"></script>
+    <script src="modal.js"></script>
+    <script src="../member/join.js"></script>
     <script src="jquery.min.js"></script>
     <script src="bootstrap.bundle.min.js"></script>
     <script src="hokmap.js"></script>

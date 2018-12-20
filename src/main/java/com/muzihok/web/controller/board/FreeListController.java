@@ -16,7 +16,12 @@ import com.muzihok.web.service.BoardService;
 import com.muzihok.web.service.jdbc.JdbcBoardService;
 
 @WebServlet("/board/free/list")
+<<<<<<< HEAD
 public class FreeListController extends HttpServlet {
+=======
+
+public class FreeListController extends HttpServlet{
+>>>>>>> refs/remotes/origin/master
 
 	@Override
 	protected void doGet(HttpServletRequest request, HttpServletResponse response)

@@ -1,74 +1,23 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <!DOCTYPE html>
 <html>
     <head>
         <meta charset="UTF-8" name="viewport" content="width=device-width, initial-scale=1">
-        <link rel="stylesheet" type="text/css" media="screen" href="/css/hokdc/list.css"/>
+        <link rel="stylesheet" type="text/css" media="screen" href="../css/hokdc/hokdc.css"/>
         <title>혹한할인?!</title>
     </head>
     <body>
-        <header>
-            <div class="content-container flex">
-                <div class="header-logo-container">
-                    <a href=""><img src="/image/logo.png" width=166px height=70px></a>
-                </div>
-                <div class="header-main-container"> 
-                    <nav>
-                        <h1 class="hidden">메인메뉴</h1>
-                        <ul>
-                            <li class="hok-hover now"><a href="#">DISCOUNT</a></li>
-                            <li class="hok-hover"><a href="#">HOK! MAP</a></li>
-                            <li class="hok-hover"><a href="#">HOK! HOK!</a></li>
-                            <li class="hok-hover"><a href="#"> CENTER</a></li>
-                        </ul>
-                    </nav>
-                </div>
-                <div class="header-sub-container">
-                    <nav>
-                        <h1 class="hidden">로그인</h1>
-                        <ul>
-                            <li class=""><a href="">LOGOUT</a></li>
-                            <li class=""><a href="">MyPage</a></li>
-                        </ul>
-                    </nav>
-                </div>  
-            </div>
-        </header>
-        <div id="visual">
-            <div class="content-container">
-                <section id="search-form" >
-                    <h1 class="hidden">비쥬얼검색창</h1>
-                        <div>
-                            <input type="text" minlength="1 "maxlength="10" placeholder="검색어를 입력하세요" class="margin-r-20" />
-                            <input class="btn" type="submit" value=" " alt="검색" />
-                        </div>
-                </section>
-            </div>
-        </div>
-
+    <!-- 헤더 -->
+    <jsp:include page="/WEB-INF/views/inc/header.jsp"></jsp:include>
+    <!-- 검색 -->
+     <jsp:include page="/WEB-INF/views/inc/search.jsp"></jsp:include>    
+               
         <div id="body">
             <div class="content-container" style="display:flex;">
-                <div class="body-aside-container">
-                    <aside>
-                        <h1 class="hidden">어사이드리모콘</h1>
-                        <div class="menu-bar menu-bar-dcmenu margin-r-20" >
-                            <div class="text-center">
-                                <div class="menu-bar-category">
-                                        카테고리
-                                </div>
-        
-                                <div>
-                                    <ul class="hover-back">
-                                        <a href=""><li class="now">MyList</li></a>
-                                        <a href=""><li class="">한식</li></a>
-                                        <a href=""><li class="">편의점</li></a>
-                                        <a href=""><li class="">가족/뷔페</li></a>
-                                    </ul>
-                                </div>
-                            </div>
-                        </div>
-                    </aside>
+                <div class="aside-container">
+                    <jsp:include page="inc/asidemenu.jsp" />
                 </div>
                 <div class="body-main-container">
                     <section id="main-body">
@@ -93,7 +42,7 @@
                                                 <li>
                                                     <div>
                                                         <div class="dc-image-border">
-                                                            <a class="" href="detail">
+                                                            <a class="" href="detail.html">
                                                                 <div class="margin-20 dc-image-container">
                                                                     <img class="dc-title-image" src="/image/brand/fast/kfc.jpg" alt="이미지"/>
                                                                 </div>
@@ -117,7 +66,7 @@
                                                 <li>
                                                     <div>
                                                         <div class="dc-image-border">
-                                                            <a href="detail">
+                                                            <a href="detail.html">
                                                                 <div class="margin-20 dc-image-container">
                                                                         <img class="dc-title-image" src="/image/brand/fast/kfc.jpg" alt="이미지"/>
                                                                 </div>
@@ -141,7 +90,7 @@
                                                 <li>
                                                     <div>
                                                         <div class="dc-image-border">
-                                                            <a href="detail">
+                                                            <a href="detail.html">
                                                                 <div class="margin-20 dc-image-container">
                                                                         <img class="dc-title-image" src="/image/brand/fast/kfc.jpg" alt="이미지"/>
                                                                 </div>
@@ -165,7 +114,7 @@
                                                 <li>
                                                     <div>
                                                         <div class="dc-image-border">
-                                                            <a href="detail">
+                                                            <a href="detail.html">
                                                                 <div class="margin-20 dc-image-container">
                                                                         <img class="dc-title-image" src="/image/brand/fast/kfc.jpg" alt="이미지"/>
                                                                 </div>
@@ -189,7 +138,7 @@
                                                 <li>
                                                     <div>
                                                         <div class="dc-image-border">
-                                                            <a href="detail">
+                                                            <a href="detail.html">
                                                                 <div class="margin-20 dc-image-container">
                                                                         <img class="dc-title-image" src="/image/brand/fast/kfc.jpg" alt="이미지"/>
                                                                 </div>
@@ -213,7 +162,7 @@
                                                 <li>
                                                     <div>
                                                         <div class="dc-image-border">
-                                                            <a href="detail">
+                                                            <a href="detail.html">
                                                                 <div class="margin-20 dc-image-container">
                                                                         <img class="dc-title-image" src="/image/brand/fast/kfc.jpg" alt="이미지"/>
                                                                 </div>
@@ -263,7 +212,7 @@
                                                                 <label class="checkbox-wrap">
                                                                     <input type="checkbox" id="cb1" ><label class="check-icon" for="cb1"></label>
                                                                 </label>
-                                                            <a href="detail">
+                                                            <a href="detail.html">
                                                                     <div class="margin-20 dc-image-container">
                                                                             <img class="dc-title-image" src="/image/brand/fast/kfc.jpg" alt="이미지"/>
                                                                     </div>
@@ -289,7 +238,7 @@
                                                                     <label class="checkbox-wrap">
                                                                         <input type="checkbox" id="cb1" ><label class="check-icon" for="cb1"></label>
                                                                     </label>
-                                                                <a href="detail">
+                                                                <a href="detail.html">
                                                                         <div class="margin-20 dc-image-container">
                                                                                 <img class="dc-title-image" src="/image/brand/fast/kfc.jpg" alt="이미지"/>
                                                                         </div>
@@ -316,7 +265,7 @@
                                                                     <label class="checkbox-wrap">
                                                                         <input type="checkbox" id="cb1" ><label class="check-icon" for="cb1"></label>
                                                                     </label>
-                                                                <a href="detail">
+                                                                <a href="detail.html">
                                                                         <div class="margin-20 dc-image-container">
                                                                                 <img class="dc-title-image" src="/image/brand/fast/kfc.jpg" alt="이미지"/>
                                                                         </div>
@@ -343,7 +292,7 @@
                                                                     <label class="checkbox-wrap">
                                                                         <input type="checkbox" id="cb1" ><label class="check-icon" for="cb1"></label>
                                                                     </label>
-                                                                <a href="detail">
+                                                                <a href="detail.html">
                                                                         <div class="margin-20 dc-image-container">
                                                                                 <img class="dc-title-image" src="/image/brand/fast/kfc.jpg" alt="이미지"/>
                                                                         </div>
@@ -370,7 +319,7 @@
                                                                     <label class="checkbox-wrap">
                                                                         <input type="checkbox" id="cb1" ><label class="check-icon" for="cb1"></label>
                                                                     </label>
-                                                                <a href="detail">
+                                                                <a href="detail.html">
                                                                         <div class="margin-20 dc-image-container">
                                                                                 <img class="dc-title-image" src="/image/brand/fast/kfc.jpg" alt="이미지"/>
                                                                         </div>
@@ -397,7 +346,7 @@
                                                                     <label class="checkbox-wrap">
                                                                         <input type="checkbox" id="cb1" ><label class="check-icon" for="cb1"></label>
                                                                     </label>
-                                                                <a href="detail">
+                                                                <a href="detail.html">
                                                                         <div class="margin-20 dc-image-container">
                                                                                 <img class="dc-title-image" src="/image/brand/fast/kfc.jpg" alt="이미지"/>
                                                                         </div>
@@ -438,7 +387,7 @@
                         </div>
                     </section>
                 </div>
-                <div class="body-aside-container">
+                <div class="aside-container">
                     <!-- <aside>
                          
                         <h1 class="hidden">내 지갑 (제휴 현황) 시럽 벤치마킹</h1>
@@ -462,10 +411,7 @@
                 </div>
             </div>
         </div>
-        <footer>
-            <div class="content-container">
-                FOOTER
-            </div>
-        </footer>
+        <!-- 푸터 -->
+   	<jsp:include page="/WEB-INF/views/inc/footer.jsp"></jsp:include>
     </body>
 </html>
