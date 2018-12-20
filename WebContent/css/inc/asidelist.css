@@ -6,7 +6,7 @@ aside{
 aside .menu-bar{
     font-size:25px;
     line-height: 70px;
-    background-color:rgb(246, 219, 218); 
+    background-color:#a3a3a3;
     border-radius: 5px;
 }
 aside .menu-bar-dcmenu{
@@ -17,7 +17,7 @@ aside .menu-bar-card{
 }
 aside .menu-bar-category{
     line-height:100px;
-    background-color:rgb(95, 86, 95); 
+    background-color:#343a40;
     color:rgb(255, 255, 255); 
     font-weight: bold;
     font-size:27px;
@@ -30,4 +30,8 @@ aside .hover-back a:hover{
     animation: 1s underline forwards ;
     transition:all 1s ease; 
     font-weight: bold;
+}
+
+aside .hover-back{
+    font-weight:bold;
 }

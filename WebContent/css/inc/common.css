@@ -37,7 +37,7 @@ hr{
 }
 
 
-/* -----------------------------------기본 마진 패딩 관련------------------------------------------------------------------ */
+/* -----------------------------------기본 마진 패딩 ----------------------------------------------------------------- */
 .margin-t-20{
     margin-top:20px !important;
 }
@@ -108,7 +108,7 @@ hr{
 .padding-b-20{
     padding-bottom:20px;
 }
-/* -----------------래핑하기  ---------------------------------------- */
+/* -----------------래핑하기-------------------------------------- */
 .block-wrapping{
     display:inline-block !important;
 }
@@ -142,7 +142,7 @@ header{
 
 }
 #body{
-    min-height:900px;
+    min-height:1100px;
     /* background:rgb(6, 221, 78); */
 }
 footer{
@@ -184,33 +184,67 @@ header .header-sub-container{
     min-height: inherit;
     /* background:turquoise; */
 }
-#body .body-aside-container{
-    position: relative;
-    width:300px;
-    /* background-color:hotpink;  */
-}
-#body .body-main-container{
+#body .aside-container{
+     position: relative;
+     width:500px;       
+     border-left: 1px solid rgba(0,0,0,.1);
+     border-right: 1px solid rgba(0,0,0,.1);
+      
+ }
+#body .main-container{
     position: relative;
     width:1000px;
     /* background-color:yellow;  */
 }
 footer .content-container{
-    background: wheat;
+    background: #a3a3a3;
 }
 
-/* -------------------------------------------버튼----------------------------- */
-.btn{
+/* -------------------------------------------踰꾪듉----------------------------- */
+.btn, .login-btn{
     outline:none;
     cursor: pointer;
 }
+.login-btn{
 
-/* ----------------------------위치 관련------------------------------------------ */
+    background: none;
+    border: none;
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+}
+.login-btn:hover{
+    color: coral;
+    animation: 0.5s underline forwards ;
+    transition:all 0.5s ease; 
+}
+.btns{
+    display: flex;
+    top: 20px;
+    font-size: 12px;
+    position: absolute;
+}
+.btns a{
+    display: inline;
+    border-left:1px solid white;
+    padding:0 10px;
+}
+.btns a:nth-child(2){
+    border-left:none;
+    }
+
+
+/* ---------------------------위치관련---------------------------------------- */
 
 .highlighted{
     color: red;
     font-weight: bold;
 }
-/* -----------------------------------헤더 관련------------------------------------------------------------------ */
+.unhighlighted{
+    color: white;
+    font-weight: bold;
+}
+/* -----------------------------------헤더관련----------------------------------------------------------------- */
 .menu-lists{
    
     height: 60px;
@@ -272,9 +306,9 @@ footer .content-container{
     color:coral;
 } */
 
-/* ---------------------이동경로----------------------------------------- */
+/* ---------------------이동경로---------------------------------------- */
 .home-btn{
-    background: url(/WebContent/image/icon/home-24.png);
+    background: url(/image/icon/home-24.png);
     border:none;
     width:24px;
     height:24px;
@@ -282,13 +316,13 @@ footer .content-container{
 #main-body .page-path{
     vertical-align: middle;
 }
-.menu-lists ul li{
+.menu-lists ul li {
     display: inline;
     border-left:1px solid white;
     padding:0 50px;
-    
     
     }
     .menu-lists ul li:first-child{
         border-left:none;
     }
+  

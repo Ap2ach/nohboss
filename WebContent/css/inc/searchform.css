@@ -8,7 +8,6 @@
   
 }
 #search-form input[type=search]{
- 
     border: rgb(95, 86, 95) solid 1px;
     border-radius: 5px;
     width:500px; 
@@ -30,20 +29,17 @@
     border:none;
     width:25px;
     height:25px;
-    background: url("/WebContent/image/icon/zoom-in-64.png");
+    background: url("/image/icon/zoom-in-64.png");
     background-size: cover;
     display:flex;
     margin-left: 460px;
    
-    
-
-   
 }
-form{
+.search-form{
     display:flex;
     align-items: center;
 }
-select{
+#search-form select{
     height: 35px;
     background: none;
     position: absolute;
@@ -51,4 +47,10 @@ select{
     width: 100px;
     font-size: 14px !important;
     font-weight: bold;
+}
+
+#search-form select {
+    width: 150px;
+    height: 30px;
+    border: none;   
 }
