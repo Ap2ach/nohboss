@@ -15,6 +15,10 @@ public class Board {
 	
 	
 	// for insert into
+	public Board() {
+		// TODO Auto-generated constructor stub
+	}
+	
 	public Board(String title, String writerId, String content, int categoryId) {
 		this.Title = title;
 		this.WriterId = writerId;
