@@ -1,5 +1,6 @@
-<%@ page language="java" contentType="text/html; charset=EUC-KR"
-	pageEncoding="EUC-KR"%>
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+    pageEncoding="UTF-8"%>
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <div id="myModal" class="modal">
 	<!-- Modal content -->
 	<div class="join-container">
@@ -10,10 +11,10 @@
 					<div class="panel-heading">
 						<div class="row">
 							<div class="col-xs-6">
-								<a href="#" class="active" id="login-form-link">∑Œ±◊¿Œ</a>
+								<a href="#" class="active" id="login-form-link">Î°úÍ∑∏Ïù∏</a>
 							</div>
 							<div class="col-xs-6">
-								<a href="#" id="register-form-link">»∏ø¯∞°¿‘</a>
+								<a href="#" id="register-form-link">ÌöåÏõêÍ∞ÄÏûÖ</a>
 							</div>
 						</div>
 						<hr>
@@ -25,15 +26,15 @@
 									method="post" role="form" style="display: block;">
 									<div class="form-group">
 										<input type="text" name="username" id="uid" tabindex="1"
-											class="form-control" placeholder="æ∆¿Ãµ" value="">
+											class="form-control" placeholder="ÏïÑÏù¥Îîî" value="">
 									</div>
 									<div class="form-group">
 										<input type="password" name="password" id="pwd" tabindex="2"
-											class="form-control" placeholder="∫Òπ–π¯»£">
+											class="form-control" placeholder="ÎπÑÎ∞ÄÎ≤àÌò∏">
 									</div>
 									<div class="form-group text-center">
 										<input type="checkbox" tabindex="3" class="" name="remember"
-											id="remember"> <label for="remember"> ¡§∫∏ ¿˙¿Â</label>
+											id="remember"> <label for="remember"> Ï†ïÎ≥¥ Ï†ÄÏû•</label>
 									</div>
 									<div class="form-group">
 										<div class="row">
@@ -49,7 +50,7 @@
 											<div class="col-lg-12">
 												<div class="text-center">
 													<a href="https://phpoll.com/recover" tabindex="5"
-														class="forgot-password">∫Òπ–π¯»£ √£±‚</a>
+														class="forgot-password">ÎπÑÎ∞ÄÎ≤àÌò∏ Ï∞æÍ∏∞</a>
 												</div>
 											</div>
 										</div>
@@ -60,33 +61,33 @@
 									role="form" style="display: none;">
 									<div class="form-group">
 										<input type="text" name="reg-uid" id="userid" tabindex="1"
-											class="form-control" placeholder="æ∆¿Ãµ" value="">
+											class="form-control" placeholder="ÏïÑÏù¥Îîî" value="">
 									</div>
 									<div class="form-group">
 										<input type="text" name="name" id="name" tabindex="2"
-											class="form-control" placeholder="¿Ã∏ß">
+											class="form-control" placeholder="Ïù¥Î¶Ñ">
 									</div>
 									<div class="form-group">
 										<input type="text" name="nicname" id="nicname" tabindex="2"
-											class="form-control" placeholder="¥–≥◊¿”">
+											class="form-control" placeholder="ÎãâÎÑ§ÏûÑ">
 									</div>
 
 									<div class="form-group">
 										<input type="password" name="reg-pwd" id="reg-pwd"
-											tabindex="2" class="form-control" placeholder="∫Òπ–π¯»£" value="">
+											tabindex="2" class="form-control" placeholder="ÎπÑÎ∞ÄÎ≤àÌò∏" value="">
 									</div>
 									<div class="form-group">
 										<input type="password" name="confirm-pwd" id="confirm-pwd"
-											tabindex="2" class="form-control" placeholder="∫Òπ–π¯»£ »Æ¿Œ"
+											tabindex="2" class="form-control" placeholder="ÎπÑÎ∞ÄÎ≤àÌò∏ ÌôïÏù∏"
 											value="">
 									</div>
 										<div class="form-group">
 										<input type="text" name="phone" id="phne" tabindex="1"
-											class="form-control" placeholder="«⁄µÂ∆˘" value="">
+											class="form-control" placeholder="Ìï∏ÎìúÌè∞" value="">
 									</div>
 									<div class="form-group">
 										<input type="email" name="email" id="email" tabindex="1"
-											class="form-control" placeholder="¿Ã∏ﬁ¿œ" value="">
+											class="form-control" placeholder="Ïù¥Î©îÏùº" value="">
 									</div>
 									<div class="form-group">
 										<input type="date" name="birth" id="birth" tabindex="2"

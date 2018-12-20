@@ -1,17 +1,18 @@
-<%@ page language="java" contentType="text/html; charset=EUC-KR"
-    pageEncoding="EUC-KR"%>
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+    pageEncoding="UTF-8"%>
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
     <div id="visual">
         <div class="content-container">
             <section id="search-form">
-                <h1 class="hidden">ºñÁê¾ó°Ë»öÃ¢</h1>
+                <h1 class="hidden">ë¹„ì¥¬ì–¼ê²€ìƒ‰ì°½</h1>
                 <form class="search-form">
                     <select>
-                        <option value="0">È¤DC</option>
-                        <option value="0">È¤MAP</option>
-                        <option value="0">È¤!È¤!</option>
+                        <option value="0">í˜¹DC</option>
+                        <option value="0">í˜¹MAP</option>
+                        <option value="0">í˜¹!í˜¹!</option>
                     </select>
-                    <input type="search" minlength="1 " maxlength="10" placeholder="°Ë»ö¾î¸¦ ÀÔ·ÂÇÏ¼¼¿ä" class="margin-r-10" />
-                    <input class="search-btn" type="submit" value=" " alt="°Ë»ö" />
+                    <input type="search" minlength="1 " maxlength="10" placeholder="ê²€ìƒ‰ì–´ë¥¼ ìž…ë ¥í•˜ì„¸ìš”" class="margin-r-10" />
+                    <input class="search-btn" type="submit" value=" " alt="ê²€ìƒ‰" />
                 </form>
             </section>
         </div>

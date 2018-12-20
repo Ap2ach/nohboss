@@ -1,5 +1,6 @@
-<%@ page language="java" contentType="text/html; charset=EUC-KR"
-	pageEncoding="EUC-KR"%>
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+    pageEncoding="UTF-8"%>
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <header>
 	<div class="content-container flex">
 		<div class="header-logo-container">
@@ -7,7 +8,7 @@
 		</div>
 		<div class="header-main-container">
 			<nav class="menu-lists">
-				<h1 class="hidden">ธÞภฮธÞดบ</h1>
+				<h1 class="hidden">๋ฉ”์ธ๋ฉ”๋ด</h1>
 				<ul>
 					<li class="hok-hover now"><a href="#">DISCOUNT</a></li>
 					<li class="hok-hover"><a href="#">HOK! MAP</a></li>
@@ -18,7 +19,7 @@
 		</div>
 		<div class="header-sub-container">
 			<div class="btns">
-				<h1 class="hidden">ทฮฑืภฮ</h1>
+				<h1 class="hidden">๋ก๊ทธ์ธ</h1>
 				<a href="#" class="login-btn" id="login-btn">LOGIN</a>
 				<div class="">
 					<a href="">MyPage</a>
