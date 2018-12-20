@@ -79,10 +79,14 @@
 
 							<ul>
 								<li><a href="?s=1">최신순</a></li>
-								<li><a href="?s=2">추천순</a></li>
-								<li><a href="?s=3">댓글순</a></li>
-								<li><a href="?s=4">조회순</a></li>
+								<li><a href="?s=2">조회순</a></li>
+								
+								<select class="notice-seq" onclick="location.href=this.value">
+									<option value="http://localhost/board/notice/list?seq=공지">공지</option>
+									<option value="http://localhost/board/notice/list?seq=이벤트">이벤트</option>
+								</select>
 							</ul>
+							
 						</section>
 
 						<section class="board-search-form">
@@ -104,7 +108,7 @@
 
 					<thead class="table-title">
 						<tr>
-							<td><span>번호</span></td>
+							<td><span>분류</span></td>
 							<td>제목</td>
 							<td>작성일</td>
 							<td>조회수</td>
@@ -115,9 +119,8 @@
 
 						<c:forEach var="n" items="${list}">
 							<tr>
-								<td class="seq">${n.id}</td>
-								<td class="title"><a href="detail?id=${n.id}">${n.title}</a><a
-									href="">[${n.commentCount}]</a></td>
+								<td class="seq">${n.seq}</td>
+								<td class="title"><a href="detail">${n.title}</a></td>
 								<td class="regdate">${n.regdate}</td>
 								<td class="hit">${n.hit}</td>
 							</tr>
@@ -146,7 +149,7 @@
 								<a class="btn" href="?p=1">더이전</a>
 							</div>
 							<div>
-								<a class="btn" href="?p=${param.p-1}">이전</a>
+								<a class="btn" href="${param.p-1}">이전</a>
 							</div>
 
 							<ul class="inline-block">

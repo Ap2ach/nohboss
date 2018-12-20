@@ -17,9 +17,8 @@ import com.muzihok.web.service.NoticeService;
 import com.muzihok.web.service.jdbc.JdbcBoardService;
 import com.muzihok.web.service.jdbc.JdbcNoticeService;
 
-
 @WebServlet("/board/notice/list")
-public class NoticeListController extends HttpServlet{
+public class NoticeListController extends HttpServlet {
 
 	@Override
 	protected void doGet(HttpServletRequest request, HttpServletResponse response)
@@ -29,36 +28,38 @@ public class NoticeListController extends HttpServlet{
 		NoticeService service = new JdbcNoticeService();
 
 		String boardCategory = "공지사항";
-		
+
 		String page_ = request.getParameter("p");
 		int page = 1;
 		if (page_ != null && !page_.equals("")) {
 			page = Integer.parseInt(page_);
 		}
-		
+
 		String sort_ = request.getParameter("s");
 		int sort = 1;
 		if (sort_ != null && !sort_.equals("")) {
 			sort = Integer.parseInt(sort_);
 		}
-		
+
 		// 게시글 쿼리
 		List<Notice> list = service.getNoticeList(page, sort);
 
 		String query = request.getParameter("q");
 		String field = request.getParameter("f");
 
-		
-		
 		if (query != null && !query.equals("")) {
 			list = service.getNoticeList(page, sort, query, field);
 		}
 
+		String seq = request.getParameter("seq");
+		if(seq != null && !seq.equals("")) {
+			list = service.getNoticeList(page, sort, seq);
+		}
+		
 		RequestDispatcher dispatcher = request.getRequestDispatcher("../../WEB-INF/views/board/notice/list.jsp");
 		request.setAttribute("list", list);
-			
+
 		dispatcher.forward(request, response);
 	}
 
-	
 }
